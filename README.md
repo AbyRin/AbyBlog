@@ -1,12 +1,16 @@
-# AbyBlog Design Description (under revision)
+# Content
+## (1) Project Description
+## (2) Log
+&nbsp;
 
+# Project Description (under revision)
 ## 1、 Front-end System
 ### 1 Art Design
 ### 2 Store
     Store homepage
     Product Details Page
     3 product search functions (search by product name, search by product category, and search by price range)
-### 3 Front desk account
+### 3 User account
     User registration, login, and logout
 ### 4 Shopping Cart:
     Add products to the shopping cart, view, modify product quantity, delete specified products, and clear the shopping cart with one click
@@ -20,7 +24,7 @@ Set up receiving information
     Add, modify, delete, and set default consignee
 ## 2、 Back-end System
 ### (1) Database Design
-### (2) Background account
+### (2) Admin account
     administrators
     Login and logout
 ### (3) Commodity Management System
@@ -34,8 +38,11 @@ Set up receiving information
     Administrator evaluation (not evaluated, evaluated, evaluation response)
 
 # Log
-AbyBlog, created on 2023.08.03
+## AbyBlog, created on 2023.08.03
 
-2023.08.03 to 17: finish pages "index", "login & register" and "store"
+## 2023.08.03 to 17
+    finish pages "index", "login & register" and "store"
 
-2023.08.17: add page "product detail"
+## 2023.08.17
+    add page "product detail"
+    upload project description
