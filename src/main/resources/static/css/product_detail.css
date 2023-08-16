@@ -12,85 +12,195 @@ body{
     justify-content: center;
     align-items: Center;
 }
-td，tr {
+a, p {
     font-family: Arial, sans-serif;
 }
 
-/* 商品div */
+/* 按钮-返回上页
+.location {
+    width: 1200px;
+    height: 40px;
+
+    float: left;
+    margin-top: 50px;
+
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(50px);
+}
+.location a {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: left;
+    text-decoration: none;
+}
+.location a:link {
+    color:#160A0A;
+}
+.location a:hover {
+    color:#F05D06;
+}
+.location a:visited {
+    color:#160A0A;
+}
+*/
+
+/* 商品详情-盒子 */
 .product_div {
-    width:1000px;
-    background-color: #F05D06;
+    width:1200px;
+    height: 500px;
     margin-top: 80px;
 
     text-align:center;
 }
+/* 商品图片div */
+.picture_div {
+    float: left;
+    display: inline;
 
-/* 商品图片 */
+    width: 500px;
+    height: 500px;
+
+    background-color: #8f8f8f;
+}
 .picture_div img{
-    width: 400px;
+    width: 500px;
 }
 
-/* 商品说明 */
-.description_div{
-    width: 600px;
-    background-color: #EAE3CB;
+/* 商品信息div */
+.information_div{
+    float: left;
+    display: inline;
+    margin-left: 40px;
+
+    width: 660px;
+    height: 500px;
+
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(50px);
 }
+/* 商品名div */
 .product_name_div {
-    width: 600px;
-    height: 40px;
+    float: left;
+    display: inline;
 
-    font-size: larger;
+    width: 660px;
+    height: 50px;
+
+    color: #3e4651;
+    text-align: left;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 25px;
+
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(50px);
 }
+.product_name_div span{
+    margin-left: 30px;
+}
+/* 商品描述div */
 .product_description_div {
-    width: 600px;
+    float: left;
+    display: inline;
+
+    width: 660px;
     height: 400px;
 
-    font-size: medium;
+    background-color:#ffffff;
+    border-top: 1px solid #696972;
 }
+.product_description_div .description_title{
+    width: 660px;
 
-/* 商品价格 */
-.tr_price .div_1{
-    text-align:left;
-    font-size: medium;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+.product_description_div .description_content{
+    width: 640px;
+    margin-left: 30px;
+
+    font-size: 16px;
+    text-align: left;
+}
+/* 商品价格div */
+.price_div {
+    float: left;
+    display: inline;
+
+    width: 220px;
+    height: 50px;
+
+    font-size: 20px;
+    line-height: 50px;
+
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(50px);
+}
+/* 按钮-收藏 */
+.button_collect {
+    float: left;
+    display: inline;
+
+    width: 220px;
+    height: 50px;
+    background-color: #f8c84f;
+
     color: #f6f1e2;
-}
-.tr_price .div_2{
-    margin-top:8px;
-}
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
 
+    border: 0;
+}
 /* 按钮-加购 */
 .button_add_cart {
-    width: 160px;
-    height: 40px;
-    background-color:#F05D06;
+    float: left;
+    display: inline;
+
+    width: 220px;
+    height: 50px;
+    background-color:#f84f52;
 
     color: #f6f1e2;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
-    line-height: 40px;
+    line-height: 50px;
 
-    border-radius: 20px;
+    border: 0;
 }
 
 /* 用户评价-标题 */
-.evaluate_table {
-    width:1000px;
-    font-weight:bold;
-    border:none;
-    text-align:center;
+.evaluate_title_div {
+    width:1200px;
     height:40px;
-    background-color: #160A0A;
-    backdrop-filter: blur(50px);
+
+    background-color: #F05D06;
+    margin-top: 40px;
+}
+.evaluate_title_div p{
+    margin-left: 30px;
+
+    text-align:left;
+    color: #EAE3CB;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
 }
 
 /* 用户评价-正文 */
 .evaluate_div {
+    width: 1200px;
+    height: 400px;
+
     background-color: rgba(255,255,255,0.6);
     backdrop-filter: blur(50px);
-    width: 830px;
 }
 /* 评价循环 */
-.evaluate_table_circulate {
+.evaluate_circulate_div {
     width:830px;
     height:120px;
 
@@ -98,9 +208,9 @@ td，tr {
     border-width:1px;
     text-align:center;
 }
-.evaluate_table_circulate .td_picture{
+.evaluate_circulate_div .td_picture{
     width: 130px;
 }
-.evaluate_table_circulate .td_evaluate_time_ip {
+.evaluate_circulate_div .td_evaluate_time_ip {
     text-align: right;
 }
