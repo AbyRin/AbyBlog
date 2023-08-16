@@ -1,0 +1,207 @@
+body{
+    /*
+    background-size: cover;
+    background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
+    */
+    background: #EAE3CB ;
+}
+
+td {
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: Center;
+}
+
+/* 商品搜索条部分 */
+.container .search_div{
+    width: 1200px;
+    height: 40px;
+
+    float: left;
+
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(50px);
+
+    margin-top: 80px;
+
+    line-height: 40px;
+}
+.container .search_div .input_span{
+    height: 40px;
+    margin: 0 0 0 40px;
+}
+
+.container .search_div .input_span .product_class {
+    width: 60px;
+    height: 26px;
+}
+
+.container .search_div input[type=text]{
+    border: 1px solid #D4D4D4;
+    height:20px;
+}
+.container .search_div input[name=name], .container .search_div input[name=category]{
+    width:120px;
+}
+.container .search_div input[name=minprice], .container .search_div input[name=maxprice]{
+    width:60px;
+}
+
+.container .search_div input[type=submit]{
+    border-style:none;
+    width:60px;
+    height:30px;
+    cursor: pointer;
+
+    color: #EAE3CB;
+    background-color: #F05D06;
+
+    margin-left: 40px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* 商品展示部分 */
+.product_container{
+    float: left;
+
+    width: 1000px;
+    backdrop-filter: blur(50px);
+
+    margin-top: 80px;
+}
+
+.product_div{
+    float: left;
+
+    width:200px;
+    height:320px;
+
+    margin-top:15px;
+    margin-left:20px;
+    margin-bottom: 40px;
+
+    padding: 10px;
+
+    display: inline-block;
+    background-color: #120F11;
+}
+
+/*
+.product_container .prod_div:nth-child(5),.product_container .prod_div:nth-child(10),
+.product_container .prod_div:nth-child(15),.product_container .prod_div:nth-child(20),
+.product_container .prod_div:nth-child(25),.product_container .prod_div:nth-child(30),
+.product_container .prod_div:nth-child(35),.product_container .prod_div:nth-child(40),
+.product_container .prod_div:nth-child(45),.product_container .prod_div:nth-child(50){
+    margin-right:0;
+}
+*/
+
+.product_container .product_div img{
+    height: 200px;
+    width: 200px;
+}
+.product_container #product_class_div{
+    width: 200px;
+    height: 15px;
+
+    font-size:15px;
+    text-align: left;
+    color: rgb(078, 157, 169);
+}
+.product_container #product_name_div{
+    width: 200px;
+    height: 20px;
+
+    margin-top: 5px;
+
+    font-size:20px;
+    text-align: left;
+    color: #EAE3CB;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.product_container #product_price_div{
+    width: 100px;
+    height: 18px;
+
+    font-size:18px;
+    margin-top:10px;
+    text-align: left;
+    color: #F05D06;
+
+    float: left;
+}
+.product_container #product_sold_div{
+    width: 100px;
+    height: 18px;
+
+    font-size:18px;
+    margin-top:10px;
+    text-align: right;
+    color: rgb(118, 132, 145);
+
+    float: right;
+}
+
+/* 功能键: 加入购物车 */
+.product_container #gotocart_div{
+    float:left;
+
+    width:100px;
+    height:30px;
+
+    margin-top:15px;
+    text-align: center;
+    line-height:30px;
+    border-top: 1px solid #666666;
+}
+#gotocart_div a{
+    display: block;
+
+    width:100px;
+    height:30px;
+
+    color:#666666;
+    text-decoration: none;
+}
+#gotocart_div a:hover{
+    background-color: #F05D06;
+    color: #EAE3CB;
+}
+
+/* 功能键: 收藏 */
+.product_container #collect_div{
+    float:left;
+
+    width:100px;
+    height:30px;
+
+    margin-top:15px;
+    text-align: center;
+    line-height:30px;
+    border-top: 1px solid #666666;
+
+}
+#collect_div a{
+    display: block;
+
+    width:100px;
+    height:30px;
+
+    color:#666666;
+    text-decoration: none;
+}
+#collect_div a:hover{
+    background-color: #F05D06;
+    color: #EAE3CB;
+}

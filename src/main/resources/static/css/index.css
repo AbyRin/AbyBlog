@@ -1,0 +1,39 @@
+body{
+    /*
+    background-size: cover;
+    background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
+    */
+    background: #EAE3CB ;
+}
+
+p {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: Center;
+}
+
+/* 主页欢迎字画部分 */
+.introduce_div {
+    float: left;
+    text-align: center;
+
+    width: 560px;
+    height: 500px;
+
+    margin-top: 80px;
+
+    /*
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(50px);
+    */
+    font-size: 18px;
+    color: #EAE3CB;
+    background-color: #160A0A;
+}
+#120F11

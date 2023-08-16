@@ -1,0 +1,49 @@
+body{
+    /*
+    background-size: cover;
+    background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
+    */
+    background: #EAE3CB ;
+}
+
+.span_warn {
+    color:red;
+    text-align: left;
+}
+
+.sign_container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: Center;
+}
+
+.sign_div {
+    width:600px;
+    border-width:0;
+    border-style:none;
+    margin-top: 80px;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(50px);
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: Center;
+}
+
+.td_sign_in {
+    text-align:center;
+    height:60px;
+    font-size: large;
+    font-weight: bold
+}
+.td_cell {
+    width: 200px;
+    text-align: right;
+}
+
+.sign_button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}

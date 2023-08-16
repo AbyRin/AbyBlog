@@ -1,0 +1,106 @@
+body{
+    /*
+    background-size: cover;
+    background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
+    */
+    background: #EAE3CB ;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: Center;
+}
+td，tr {
+    font-family: Arial, sans-serif;
+}
+
+/* 商品div */
+.product_div {
+    width:1000px;
+    background-color: #F05D06;
+    margin-top: 80px;
+
+    text-align:center;
+}
+
+/* 商品图片 */
+.picture_div img{
+    width: 400px;
+}
+
+/* 商品说明 */
+.description_div{
+    width: 600px;
+    background-color: #EAE3CB;
+}
+.product_name_div {
+    width: 600px;
+    height: 40px;
+
+    font-size: larger;
+}
+.product_description_div {
+    width: 600px;
+    height: 400px;
+
+    font-size: medium;
+}
+
+/* 商品价格 */
+.tr_price .div_1{
+    text-align:left;
+    font-size: medium;
+    color: #f6f1e2;
+}
+.tr_price .div_2{
+    margin-top:8px;
+}
+
+/* 按钮-加购 */
+.button_add_cart {
+    width: 160px;
+    height: 40px;
+    background-color:#F05D06;
+
+    color: #f6f1e2;
+    font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+
+    border-radius: 20px;
+}
+
+/* 用户评价-标题 */
+.evaluate_table {
+    width:1000px;
+    font-weight:bold;
+    border:none;
+    text-align:center;
+    height:40px;
+    background-color: #160A0A;
+    backdrop-filter: blur(50px);
+}
+
+/* 用户评价-正文 */
+.evaluate_div {
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(50px);
+    width: 830px;
+}
+/* 评价循环 */
+.evaluate_table_circulate {
+    width:830px;
+    height:120px;
+
+    font-size:small;
+    border-width:1px;
+    text-align:center;
+}
+.evaluate_table_circulate .td_picture{
+    width: 130px;
+}
+.evaluate_table_circulate .td_evaluate_time_ip {
+    text-align: right;
+}

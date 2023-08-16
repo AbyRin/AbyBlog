@@ -1,0 +1,136 @@
+p, a, tr, td {
+    font-family: Arial, sans-serif;
+}
+
+.top_div {
+    background: #160A0A;
+
+    width: 1200px;
+    height: 101px;
+}
+.top_div table{
+    border-spacing: 0;
+}
+
+.top_div table {
+    background-attachment:fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+/* 顶部栏 */
+.td_icon {
+    width:150px;
+    height:100px;
+
+    margin-left: 0;
+}
+.td_icon img{
+    height: 100px;
+}
+.td_welcome {
+    height:50px;
+    text-align:left;
+}
+.td_welcome p {
+    font-size: 17px;
+}
+.td_function {
+    width:300px;
+    height:50px;
+    margin-right: 0;
+
+    font-size: 15px;
+    text-align:right;
+}
+.td_welcome p{
+    color: #F05D06;
+}
+.td_function a:link {
+    color:#EAE3CB;
+}
+.td_function a:hover {
+    color:#F05D06;
+}
+.td_function a:visited {
+    color:#EAE3CB;
+}
+
+/* tr-登入登出栏 */
+.tr_account {
+    height:50px;
+    margin-right: 0;
+
+    font-size: 15px;
+    text-align:left;
+}
+.tr_account a {
+    text-decoration:none;
+}
+.tr_account a:link {
+    color:#EAE3CB;
+}
+.tr_account a:hover {
+    color:#F05D06;
+}
+.tr_account a:visited {
+    color:#EAE3CB;
+}
+
+/* tr-页面栏 */
+.tr_page {
+    background-color: #EAE3CB;
+
+    width: 1200px;
+    height: 40px;
+
+    text-align: center;
+    line-height: 40px;
+}
+.tr_page td{
+    align-content: center;
+
+    width: 1200px;
+    height: 40px;
+    border-bottom:#160A0A solid 2px;
+}
+
+.tr_page a {
+    color: #160A0A;
+
+    font-weight:bold;
+    font-size:medium;
+    text-decoration:none;
+}
+
+.tr_page span {
+    color: #160A0A;
+
+    font-weight:bold;
+    font-size:medium;
+    text-decoration:none;
+}
+.tr_page span:link {
+    color:#EAE3CB;
+}
+.tr_page span:hover {
+    color:#F05D06;
+}
+.tr_page span:visited {
+    color:#EAE3CB;
+}
+
+/*
+主题色 1 >
+#EAE3CB 乳白色
+#160A0A 咖啡黑色
+#F05D06 橙色
+
+主题色 2 >
+#EEE9D6 乳白色
+#160A0A 咖啡黑色
+#F9823E 橙色
+
+其他配色 >
+#120F11 藏蓝色
+*/

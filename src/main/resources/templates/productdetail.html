@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<link href="/css/product_detail.css" rel="stylesheet" type="text/css">
+    <title>AbyBlog-Product Detail</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="top" th:insert="/top.html"></div>
+
+    <div class="product_div">
+        <!-- 商品图片 -->
+        <div class="picture_div">
+            <img th:src="'/image/img_product'+${product.picture}" alt="">
+        </div>
+
+        <!-- 商品说明 -->
+        <div class="description_div">
+            <div class="product_name_div">
+                <span th:text="${product.productname}"/>
+            </div>
+            <div class="product_description_div">
+                <span>Description</span>
+                <span th:text="${product.illustrate}"/>
+            </div>
+        </div>
+
+        <!-- 商品价格 -->
+        <div class="tr_price">
+            <div class="div_1">
+                <div class="div_2">
+                    <span th:text="${product.price}">CNY</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 按钮-加购 -->
+        <div class="button_add_cart">
+            <span th:href="'/cart/addcart?productid='+${product.productid}">Add to Cart</span>
+        </div>
+    </div>
+
+    <!-- 用户评价-标题 -->
+    <table class="evaluate_table">
+        <tr>
+            <td>Evaluation</td>
+        </tr>
+    </table>
+
+    <!-- 用户评价-正文 -->
+    <div class="evaluate_div" th:each="shoplist:${shoplists}">
+
+        <!--评价循环开始 -->
+        <table class="evaluate_table_circulate">
+            <tr>
+                <td class="td_picture" rowspan=3>
+                    <img th:src="'/picture/'+${product.picture}" alt="">
+                </td>
+
+                <td>整体评价
+                    <th:block th:each="i: ${#numbers.sequence(1, shoplist.pjstar)}">
+                        <img src="/image/review_star_fen.gif" alt="">
+                    </th:block>
+                    <th:block th:each="i: ${#numbers.sequence(shoplist.pjstar,4)}">
+                        <img src="/image/review_star_fen_gray.gif" alt="">
+                    </th:block>
+                </td>
+
+                <td class="td_evaluate_time_ip">
+                    评价时间<span th:text="${shoplist.pjtime}"/>
+                    &nbsp;&nbsp;&nbsp;
+                    IP：<span th:text="${shoplist.pjip}"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan=2 th:text="'评价内容：'+${shoplist.pjcontent}">
+            </tr>
+
+            <tr>
+                <td colspan=2 th:text="'商家回复：'+${shoplist.pjreply}">
+            </tr>
+        </table>
+    </div>
+    <!--评价循环结束 -->
+</div>
+
+</body>
+</html>
