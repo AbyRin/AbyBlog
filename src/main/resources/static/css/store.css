@@ -3,11 +3,12 @@ body{
     background-size: cover;
     background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
     */
-    background: #EAE3CB ;
+    background: #dddddd;
+
 }
 
 td {
-    font-family: Arial, sans-serif;
+    font-family: frutiger sans-serif;
 }
 
 .container{
@@ -16,6 +17,8 @@ td {
 
     justify-content: center;
     align-items: Center;
+
+    background-color: #eeeeee;
 }
 
 /* 商品搜索条部分 */
@@ -25,8 +28,11 @@ td {
 
     float: left;
 
-    background-color: rgba(255,255,255,0.6);
-    backdrop-filter: blur(50px);
+    color: #ffffff;
+    font-weight: bold;
+
+    background-color: #31384f;
+    /* backdrop-filter: blur(50px); */
 
     margin-top: 30px;
 
@@ -52,15 +58,20 @@ td {
 .container .search_div input[name=minprice], .container .search_div input[name=maxprice]{
     width:60px;
 }
-
+.container .search_div .icon-search{
+    background: url(static/image/img_bg/mirror_by_icons8.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .container .search_div input[type=submit]{
     border-style:none;
     width:60px;
     height:30px;
     cursor: pointer;
 
-    color: #EAE3CB;
-    background-color: #F05D06;
+    color: #ffffff;
+    background-color: #f84f52;
 
     margin-left: 40px;
 
@@ -91,7 +102,8 @@ td {
     padding: 10px;
 
     display: inline-block;
-    background-color: #120F11;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px #bdbdbd;
 }
 
 /*
@@ -118,13 +130,13 @@ td {
 }
 .product_container #product_name_div{
     width: 200px;
-    height: 20px;
+    height: 28px;
 
     margin-top: 5px;
 
     font-size:20px;
     text-align: left;
-    color: #ffffff;
+    color: #31384f;
 
     overflow: hidden;
     white-space: nowrap;
@@ -137,7 +149,7 @@ td {
     font-size:18px;
     margin-top:10px;
     text-align: left;
-    color: #F05D06;
+    color: #f84f52;
 
     float: left;
 }
@@ -148,7 +160,7 @@ td {
     font-size:18px;
     margin-top:10px;
     text-align: right;
-    color: rgb(118, 132, 145);
+    color: #fec738;
 
     float: right;
 }
@@ -175,8 +187,8 @@ td {
     text-decoration: none;
 }
 #gotocart_div a:hover{
-    background-color: #F05D06;
-    color: #EAE3CB;
+    background-color: #f84f52;
+    color: #ffffff;
 }
 
 /* 功能键: 收藏 */
@@ -202,6 +214,6 @@ td {
     text-decoration: none;
 }
 #collect_div a:hover{
-    background-color: #F05D06;
-    color: #EAE3CB;
+    background-color: #f84f52;
+    color: #ffffff;
 }

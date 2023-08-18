@@ -5,21 +5,21 @@ p, a, span {
     font-family: Arial, sans-serif;
 }
 .orange_ring {
-    background: #F05D06;
+    background: #31384f;
 
     width: 1400px;
     height: 700px;
     border-radius: 0 0 700px 700px;
 }
 .brown_ring {
-    background: #160A0A;
+    background: #706e6f ;
 
     width: 1200px;
     height: 600px;
     border-radius: 0 0 600px 600px;
 }
 .brown_ring_2 {
-    background: rgb(44, 31, 23);
+    background: #fec738;
 
     width: 1000px;
     height: 500px;
@@ -50,13 +50,13 @@ p, a, span {
     text-decoration:none;
 }
 .function_div a:link {
-    color:#EAE3CB;
+    color: #31384f;
 }
 .function_div a:hover {
-    color:#F05D06;
+    color: #f84f52;
 }
 .td_function a:visited {
-    color:#EAE3CB;
+    color: #31384f;
 }
 /* 登入登出栏 */
 .account_div {
@@ -76,13 +76,13 @@ p, a, span {
     text-decoration:none;
 }
 .account_div a:link {
-    color:#EAE3CB;
+    color: #31384f;
 }
 .account_div a:hover {
-    color:#F05D06;
+    color: #f84f52;
 }
 .account_div a:visited {
-    color:#EAE3CB;
+    color: #31384f;
 }
 
 /* 欢迎语 */
@@ -119,7 +119,7 @@ p, a, span {
     text-align: left;
     line-height: 100px;
 
-    color: #F05D06;
+    color: #31384f;
     font-size: 100px;
     font-weight: bolder;
 
@@ -131,7 +131,7 @@ p, a, span {
 .page_div {
     float: left;
 
-    background-color: #EAE3CB;
+    background-color: #ffffff;
 
     width: 1400px;
     height: 40px;
@@ -147,7 +147,7 @@ p, a, span {
     width: 1000px;
     height: 40px;
 
-    border-bottom:#160A0A solid 2px;
+    border-bottom: #31384f solid 2px;
     margin-left: 200px;
 }
 
@@ -163,20 +163,20 @@ p, a, span {
 }
 
 .page_div_2 span {
-    color: #160A0A;
+    color: #31384f;
 
     font-weight:bold;
     font-size:20px;
     text-decoration:none;
 }
 .page_div_2 span:link {
-    color:#EAE3CB;
+    color: #31384f;
 }
 .page_div_2 span:hover {
-    color:#F05D06;
+    color: #f84f52;
 }
 .page_div_2 span:visited {
-    color:#EAE3CB;
+    color: #31384f;
 }
 
 /*

@@ -5,11 +5,11 @@ body {
     justify-content: center;
 }
 p, a, span {
-    font-family: Arial, sans-serif;
+    font-family: frutiger, sans-serif;
 }
 
 .top_container {
-    background: #160A0A;
+    background: #ffffff;
 
     width: 1200px;
     height: 100px;
@@ -28,14 +28,14 @@ p, a, span {
 .left_div {
     float: left;
 
-    width: 750px;
+    width: 650px;
     height: 100px;
 }
 /* 欢迎语 */
 .welcome_div {
     float: left;
 
-    width: 750px;
+    width: 650px;
     height:60px;
     margin-left: 20px;
 }
@@ -43,7 +43,7 @@ p, a, span {
     text-align:left;
     line-height: 60px;
 
-    color: #F05D06;
+    color: #f84f52;
     font-size: 20px;
     font-weight: bolder;
 
@@ -64,45 +64,48 @@ p, a, span {
     text-decoration:none;
 }
 .account_div a:link {
-    color:#EAE3CB;
+    color: #31384f;
 }
 .account_div a:hover {
-    color:#F05D06;
+    color: #f84f52;
 }
 .account_div a:visited {
-    color:#EAE3CB;
+    color: #31384f;
 }
 
 /* 功能键 */
 .function_div {
     float: left;
 
-    width:300px;
+    width:400px;
     height:40px;
     margin-right: 0;
+
+    text-align: right;
 }
 .function_div a {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;
     text-align:right;
     line-height: 40px;
 
     text-decoration:none;
 }
 .function_div a:link {
-    color:#EAE3CB;
+    color: #31384f;
 }
 .function_div a:hover {
-    color:#F05D06;
+    color: #f84f52;
 }
 .td_function a:visited {
-    color:#EAE3CB;
+    color: #31384f;
 }
 
 /* 分页栏 */
 .page_div {
     float: left;
 
-    background-color: #EAE3CB;
+    background-color: #eeeeee;
 
     width: 1200px;
     height: 40px;
@@ -116,11 +119,11 @@ p, a, span {
     width: 1200px;
     height: 40px;
 
-    border-bottom:#160A0A solid 2px;
+    border-bottom:#31384f solid 2px;
 }
 
 .page_div_2 a {
-    color: #160A0A;
+    color: #31384f;
 
     font-weight:bold;
     font-size:medium;
@@ -128,33 +131,40 @@ p, a, span {
 }
 
 .page_div_2 span {
-    color: #160A0A;
+    color: #31384f;
 
     font-weight:bold;
     font-size:medium;
     text-decoration:none;
 }
 .page_div_2 span:link {
-    color:#EAE3CB;
+    color: #31384f;
 }
 .page_div_2 span:hover {
-    color:#F05D06;
+    color: #f84f52;
 }
 .page_div_2 span:visited {
-    color:#EAE3CB;
+    color: #31384f;
 }
 
 /*
-主题色 1 >
+构成主义 1 >
 #EAE3CB 乳白色
 #160A0A 咖啡黑色
 #F05D06 橙色
 
-主题色 2 >
+构成主义 2 >
 #EEE9D6 乳白色
 #160A0A 咖啡黑色
 #F9823E 橙色
 
 其他配色 >
 #120F11 藏蓝色
+
+简约 >
+#31384f 藏蓝色
+#fec738 黄色
+#b2b2b2 浅灰
+#706e6f 深灰
+#e7e5e1 鹅毛灰色-背景板
 */

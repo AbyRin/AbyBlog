@@ -20,14 +20,15 @@
             </span>
             <span class="input_span">Class
                 <select name="productclass" class="product_class">
-                    <option value="">不限</option>
+                    <option value="">All</option>
                     <option th:each="productclass:${productclasses}" th:value="${productclass}" th:text="${productclass}"></option>
 				</select>
             </span>
             <span class="input_span">Price Range
                 <input type="text" name="minprice"/> ~ <input type="text" name="maxprice" />
             </span>
-            <input type="submit" value="查询">
+            <i class="icon-search"></i>
+            <input type="submit" value="Search">
         </form>
     </div>
 

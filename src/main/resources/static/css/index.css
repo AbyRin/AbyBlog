@@ -3,7 +3,7 @@ body{
     background-size: cover;
     background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
     */
-    background: #EAE3CB;
+    background: #eeeeee;
 
     position: absolute;
 
@@ -27,7 +27,7 @@ p, a {
 .triangle {
     width: 0;
     height: 0;
-    border-top: 45px solid #160A0A;
+    border-top: 45px solid #f84f52;
     border-right: 30px solid transparent;
     border-left: 30px solid transparent;
 
@@ -47,7 +47,7 @@ p, a {
 .introduce_div p{
     font-size: 18px;
     font-weight: bolder;
-    color: #F05D06;
+    color: #f84f52;
 }
 
 /* 功能介绍分块 */
@@ -100,7 +100,7 @@ p, a {
     float: left;
     margin-left: 0;
 
-    background-color: #F05D06;
+    background-color: #31384f;
 }
 .circle_1 a{
     font-size: 40px;
@@ -149,7 +149,7 @@ p, a {
     float: right;
     margin-right: 0;
 
-    background-color: #F05D06;
+    background-color: #fec738;
 }
 .circle_2 a{
     font-size: 40px;
@@ -178,7 +178,7 @@ p, a {
     margin-right: 0;
 }
 
-/* 分块1 */
+/* 分块3 */
 .box_3 {
     width: 1200px;
     height: 180px;
@@ -198,7 +198,7 @@ p, a {
     float: left;
     margin-left: 0;
 
-    background-color: #F05D06;
+    background-color: #f84f52;
 }
 .circle_3 a{
     font-size: 40px;
@@ -224,4 +224,54 @@ p, a {
     text-decoration: none;
 
     margin-top: 40px;
+}
+
+/* 分块4 */
+.box_4 {
+    width: 1200px;
+    height: 180px;
+
+    display: flex;
+
+    float: left;
+    margin: 40px 0 50px 40px;
+}
+.circle_4 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+
+    text-align: center;
+    line-height: 180px;
+
+    float: right;
+    margin-right: 0;
+
+    background-color: #706e6f;
+}
+.circle_4 a{
+    font-size: 40px;
+    font-weight: 20;
+
+    color: white;
+
+    text-decoration: none;
+}
+.word_div_4 {
+    width: 735px;
+    height: 180px;
+
+    float: right;
+
+    margin-right: 40px;
+}
+.word_div_4 p{
+    font-size: 18px;
+    font-weight: bolder;
+
+    color: #160A0A;
+    text-decoration: none;
+
+    margin-top: 40px;
+    margin-right: 0;
 }
