@@ -3,14 +3,20 @@ body{
     background-size: cover;
     background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
     */
-    background: #EAE3CB ;
+    background: #EAE3CB;
+
+    position: absolute;
+
+    left: 57%;
+    transform: translate(-50%);
 }
 
-p {
+p, a {
     font-family: Arial, sans-serif;
 }
 
 .container {
+    width: 1000px;
     display: flex;
     flex-direction: column;
 
@@ -18,22 +24,204 @@ p {
     align-items: Center;
 }
 
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 45px solid #160A0A;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+
+    margin-top: 20px;
+}
+
 /* 主页欢迎字画部分 */
 .introduce_div {
     float: left;
     text-align: center;
 
-    width: 560px;
-    height: 500px;
+    width: 1000px;
+    height: 140px;
 
     margin-top: 80px;
-
-    /*
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(50px);
-    */
-    font-size: 18px;
-    color: #EAE3CB;
-    background-color: #160A0A;
 }
-#120F11
+.introduce_div p{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #F05D06;
+}
+
+/* 功能介绍分块 */
+/* 废弃设计
+.square_1 {
+    width: 1600px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 600px;
+}
+.img_div {
+    width: 120px;
+    height: 120px;
+
+    float: left;
+}
+.square img{
+    width: 120px;
+}
+.word_div {
+    width: 880px;
+    height: 120px;
+
+    float: left;
+}
+.word_div p{
+    color: #160A0A;
+}
+*/
+/* 分块1 */
+.box_1 {
+    width: 1200px;
+    height: 180px;
+
+    display: flex;
+
+    margin-top: 40px;
+}
+.circle_1 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+
+    text-align: center;
+    line-height: 180px;
+
+    float: left;
+    margin-left: 0;
+
+    background-color: #F05D06;
+}
+.circle_1 a{
+    font-size: 40px;
+    font-weight: 20;
+
+    color: white;
+
+    text-decoration: none;
+}
+.word_div_1 {
+    width: 725px;
+    height: 180px;
+
+    float: left;
+
+    margin-left: 40px;
+}
+.word_div_1 p{
+    font-size: 18px;
+    font-weight: bolder;
+
+    color: #160A0A;
+    text-decoration: none;
+
+    margin-top: 40px;
+}
+
+/* 分块2 */
+.box_2 {
+    width: 1200px;
+    height: 180px;
+
+    display: flex;
+
+    float: left;
+    margin: 40px 0 30px 40px;
+}
+.circle_2 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+
+    text-align: center;
+    line-height: 180px;
+
+    float: right;
+    margin-right: 0;
+
+    background-color: #F05D06;
+}
+.circle_2 a{
+    font-size: 40px;
+    font-weight: 20;
+
+    color: white;
+
+    text-decoration: none;
+}
+.word_div_2 {
+    width: 735px;
+    height: 180px;
+
+    float: right;
+
+    margin-right: 40px;
+}
+.word_div_2 p{
+    font-size: 18px;
+    font-weight: bolder;
+
+    color: #160A0A;
+    text-decoration: none;
+
+    margin-top: 40px;
+    margin-right: 0;
+}
+
+/* 分块1 */
+.box_3 {
+    width: 1200px;
+    height: 180px;
+
+    display: flex;
+
+    margin-top: 80px;
+}
+.circle_3 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+
+    text-align: center;
+    line-height: 180px;
+
+    float: left;
+    margin-left: 0;
+
+    background-color: #F05D06;
+}
+.circle_3 a{
+    font-size: 40px;
+    font-weight: 20;
+
+    color: white;
+
+    text-decoration: none;
+}
+.word_div_3 {
+    width: 725px;
+    height: 180px;
+
+    float: left;
+
+    margin-left: 40px;
+}
+.word_div_3 p{
+    font-size: 18px;
+    font-weight: bolder;
+
+    color: #160A0A;
+    text-decoration: none;
+
+    margin-top: 40px;
+}

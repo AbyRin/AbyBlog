@@ -6,78 +6,78 @@
 </head>
 
 <body>
+<div class="top_container">
+    <!-- 图标 -->
+    <div class="icon_div">
+        <img src="/image/img_bg/aby_icon_2.png" alt="">
+    </div>
 
-<div class="top_div">
-    <table>
-        <tr>
-            <td class="td_icon" rowspan="2">
-                <img src="/image/img_bg/aby_icon.png" alt="">
-            </td>
+    <div class="left_div">
+        <!-- 欢迎语 -->
+        <div class="welcome_div">
+            <a th:if="${session.member}">
+                <span th:text="${session.member.getEmail()}+'Welcome to AbyBlog!'"></span>
+            </a>
+            <a th:unless="${session.member}">Welcome to AbyBlog!</a>
+        </div>
 
-            <td class="td_welcome">
-                <p th:if="${session.member}">
-                    <span th:text="${session.member.getEmail()}+'Welcome to AbyBlog!'"></span>
-                </p>
-                <p th:unless="${session.member}">Welcome to AbyBlog!</p>
-            </td>
-
-            <!-- 功能键 -->
-            <td class="td_function">
-                <a href="/user" style="text-decoration:none;">Account</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="/order/showorder" style="text-decoration:none;">Order</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="/cart/showcart" style="text-decoration:none;">Cart</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="/collect/showcollect" style="text-decoration:none;">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            </td>
-        </tr>
-
-        <!-- 登入登出键 -->
-        <tr class="tr_account">
-            <td>
-                <p th:if="${session.member}">
+        <!-- 登入登出 -->
+        <div class="account_div">
+            <div>
+                <a th:if="${session.member}">
                     <a href="/index/toLogout">Sign Out</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/index/toRegister">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/admin/toAdminLogin">Sign In as Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                </p>
-                <p th:unless="${session.member}">
+                </a>
+                <a th:unless="${session.member}">
                     <a href="/index/toLogin">Sign In</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/index/toRegister">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/admin/toAdminLogin">Sign In as Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                </p>
-            </td>
+                </a>
+            </div>
+        </div>
+    </div>
 
-        </tr>
+    <!-- 功能键 -->
+    <div class="function_div">
+        <a href="/user" style="text-decoration:none;">Account&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+        <a href="/order/showorder" style="text-decoration:none;">Order&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+        <a href="/cart/showcart" style="text-decoration:none;">Cart&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+        <a href="/collect/showcollect" style="text-decoration:none;">Collection&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
 
-        <tr class="tr_page">
-            <td colspan=3>
-                <a> | </a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/index">
-                    <span>Index</span>
-                </a>
-                &nbsp;&nbsp;&nbsp;
-                <a> | </a>&nbsp;&nbsp;&nbsp;
-                <a href="/library">
-                    <span>Library</span>
-                </a>
-                &nbsp;&nbsp;&nbsp;
-                <a> | </a>&nbsp;&nbsp;&nbsp;
-                <a href="/store">
-                    <span>Store</span>
-                </a>
-                &nbsp;&nbsp;&nbsp;
-                <a> | </a>&nbsp;&nbsp;&nbsp;
-                <a href="/comment">
-                    <span>Comment</span>
-                </a>
-                &nbsp;&nbsp;&nbsp;
-                <a> | </a>&nbsp;&nbsp;&nbsp;
-                <a href="/comment">
-                    <span>About Aby</span>
-                </a>
-                &nbsp;&nbsp;
-                <a> | </a>&nbsp;&nbsp;&nbsp;
-        </tr>
-    </table>
+    <!-- 分页栏 -->
+    <div class="page_div">
+        <div class="page_div_2">
+            <a> | </a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/index">
+                <span>Index</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a> | </a>&nbsp;&nbsp;&nbsp;
+            <a href="/library">
+                <span>Library</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a> | </a>&nbsp;&nbsp;&nbsp;
+            <a href="/store">
+                <span>Store</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a> | </a>&nbsp;&nbsp;&nbsp;
+            <a href="/comment">
+                <span>Comment</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a> | </a>&nbsp;&nbsp;&nbsp;
+            <a href="/comment">
+                <span>About Aby</span>
+            </a>
+            &nbsp;&nbsp;
+            <a> | </a>&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
 </div>
 
 </body>

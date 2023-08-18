@@ -76,7 +76,7 @@ a, p {
     width: 660px;
     height: 500px;
 
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.4);
     backdrop-filter: blur(50px);
 }
 /* 商品名div */
@@ -107,7 +107,8 @@ a, p {
     width: 660px;
     height: 400px;
 
-    background-color:#ffffff;
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(50px);
     border-top: 1px solid #696972;
 }
 .product_description_div .description_title{
@@ -135,8 +136,7 @@ a, p {
     font-size: 20px;
     line-height: 50px;
 
-    background-color: rgba(255,255,255,0.4);
-    backdrop-filter: blur(50px);
+    background-color:#ffffff;
 }
 /* 按钮-收藏 */
 .button_collect {
@@ -181,14 +181,17 @@ a, p {
     background-color: #F05D06;
     margin-top: 40px;
 }
-.evaluate_title_div p{
+.evaluate_title_div a{
     margin-left: 30px;
 
     text-align:left;
+    line-height: 40px;
+
     color: #EAE3CB;
     font-size: 20px;
     font-weight: bold;
-    line-height: 40px;
+
+    text-decoration: none;
 }
 
 /* 用户评价-正文 */

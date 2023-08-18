@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>index专用顶部</title>
+    <link rel="stylesheet" type="text/css" href="/css/index_top.css">
+</head>
+
+<body>
+<div class="orange_ring">
+    <div class="brown_ring">
+        <div class="brown_ring_2">
+            <div class="top_container">
+                <!-- 功能键 -->
+                <div class="function_div">
+                    <a href="/user" style="text-decoration:none;">Account&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="/order/showorder" style="text-decoration:none;">Order&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="/cart/showcart" style="text-decoration:none;">Cart&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="/collect/showcollect" style="text-decoration:none;">Collection&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </div>
+
+                <!-- 登入登出 -->
+                <div class="account_div">
+                    <div>
+                        <a th:if="${session.member}">
+                            <a href="/index/toLogout">Sign Out</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/index/toRegister">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/admin/toAdminLogin">Sign In as Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </a>
+                        <a th:unless="${session.member}">
+                            <a href="/index/toLogin">Sign In</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/index/toRegister">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/admin/toAdminLogin">Sign In as Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 欢迎语 -->
+                <div class="welcome_div_1">
+                    <a>Welcome to</a>
+                </div>
+                <div class="welcome_div_2">
+                    <a>AbyBlog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分页栏 -->
+    <div class="page_div">
+        <div class="page_div_2">
+            <a> | </a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/index">
+                <span>Index</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a> | </a>&nbsp;&nbsp;&nbsp;
+            <a href="/library">
+                <span>Library</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a> | </a>&nbsp;&nbsp;&nbsp;
+            <a href="/store">
+                <span>Store</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a> | </a>&nbsp;&nbsp;&nbsp;
+            <a href="/comment">
+                <span>Comment</span>
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a> | </a>&nbsp;&nbsp;&nbsp;
+            <a href="/comment">
+                <span>About Aby</span>
+            </a>
+            &nbsp;&nbsp;
+            <a> | </a>&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 	<link href="/css/product_detail.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/image/img_bg/web_icon.png">
     <title>AbyBlog-Product Detail</title>
 </head>
 
@@ -20,7 +21,7 @@
     <div class="product_div">
         <!-- 商品图片 -->
         <div class="picture_div">
-            <img th:src="'/image/img_product'+${product.picture}" alt="">
+            <img th:src="'/image/img_product/'+${product.picture}" alt="">
         </div>
         <!-- 商品信息 -->
         <div class="information_div">
@@ -50,7 +51,7 @@
 
     <!-- 用户评价-标题 -->
     <div class="evaluate_title_div">
-        <p>Evaluation</p>
+        <a>Evaluation</a>
     </div>
 
     <!-- 用户评价-正文 -->

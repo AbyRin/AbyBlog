@@ -1,84 +1,107 @@
-p, a, tr, td {
+body {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+p, a, span {
     font-family: Arial, sans-serif;
 }
 
-.top_div {
+.top_container {
     background: #160A0A;
 
     width: 1200px;
-    height: 101px;
-}
-.top_div table{
-    border-spacing: 0;
-}
-
-.top_div table {
-    background-attachment:fixed;
-    background-size: cover;
-    text-align: center;
-}
-
-/* 顶部栏 */
-.td_icon {
-    width:150px;
-    height:100px;
-
-    margin-left: 0;
-}
-.td_icon img{
     height: 100px;
 }
-.td_welcome {
-    height:50px;
-    text-align:left;
-}
-.td_welcome p {
-    font-size: 17px;
-}
-.td_function {
-    width:300px;
-    height:50px;
-    margin-right: 0;
+/* 图标 */
+.icon_div {
+    float: left;
 
-    font-size: 15px;
-    text-align:right;
+    width:150px;
+    height:100px;
 }
-.td_welcome p{
+.icon_div img{
+    height: 100px;
+}
+/* 欢迎语,登入登出栏-总div */
+.left_div {
+    float: left;
+
+    width: 750px;
+    height: 100px;
+}
+/* 欢迎语 */
+.welcome_div {
+    float: left;
+
+    width: 750px;
+    height:60px;
+    margin-left: 20px;
+}
+.welcome_div a {
+    text-align:left;
+    line-height: 60px;
+
     color: #F05D06;
+    font-size: 20px;
+    font-weight: bolder;
+
+    text-decoration: none;
 }
-.td_function a:link {
+/* 登入登出栏 */
+.account_div {
+    float: left;
+    margin-left: 20px;
+
+    height:40px;
+}
+.account_div a {
+    font-size: 15px;
+    text-align:left;
+    line-height: 40px;
+
+    text-decoration:none;
+}
+.account_div a:link {
     color:#EAE3CB;
 }
-.td_function a:hover {
+.account_div a:hover {
+    color:#F05D06;
+}
+.account_div a:visited {
+    color:#EAE3CB;
+}
+
+/* 功能键 */
+.function_div {
+    float: left;
+
+    width:300px;
+    height:40px;
+    margin-right: 0;
+}
+.function_div a {
+    font-size: 15px;
+    text-align:right;
+    line-height: 40px;
+
+    text-decoration:none;
+}
+.function_div a:link {
+    color:#EAE3CB;
+}
+.function_div a:hover {
     color:#F05D06;
 }
 .td_function a:visited {
     color:#EAE3CB;
 }
 
-/* tr-登入登出栏 */
-.tr_account {
-    height:50px;
-    margin-right: 0;
+/* 分页栏 */
+.page_div {
+    float: left;
 
-    font-size: 15px;
-    text-align:left;
-}
-.tr_account a {
-    text-decoration:none;
-}
-.tr_account a:link {
-    color:#EAE3CB;
-}
-.tr_account a:hover {
-    color:#F05D06;
-}
-.tr_account a:visited {
-    color:#EAE3CB;
-}
-
-/* tr-页面栏 */
-.tr_page {
     background-color: #EAE3CB;
 
     width: 1200px;
@@ -87,15 +110,16 @@ p, a, tr, td {
     text-align: center;
     line-height: 40px;
 }
-.tr_page td{
+.page_div_2{
     align-content: center;
 
     width: 1200px;
     height: 40px;
+
     border-bottom:#160A0A solid 2px;
 }
 
-.tr_page a {
+.page_div_2 a {
     color: #160A0A;
 
     font-weight:bold;
@@ -103,20 +127,20 @@ p, a, tr, td {
     text-decoration:none;
 }
 
-.tr_page span {
+.page_div_2 span {
     color: #160A0A;
 
     font-weight:bold;
     font-size:medium;
     text-decoration:none;
 }
-.tr_page span:link {
+.page_div_2 span:link {
     color:#EAE3CB;
 }
-.tr_page span:hover {
+.page_div_2 span:hover {
     color:#F05D06;
 }
-.tr_page span:visited {
+.page_div_2 span:visited {
     color:#EAE3CB;
 }
 

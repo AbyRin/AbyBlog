@@ -37,7 +37,7 @@
         <!-- 商品展示块 -->
         <div class="product_div" th:each="product:${productlist}">
             <a th:href="'/store/productdetail?productid='+${product.productid}">
-                <img style="height: 200px; width: 200px;" th:src="@{'/image/img_bg/'+${product.picture}}" alt=""/>
+                <img style="height: 200px; width: 200px;" th:src="@{'/image/img_product/'+${product.picture}}" alt=""/>
             </a>
             <div id="product_class_div" th:utext="${product.productclass}" ><b>Product Class</b></div>
             <div id="product_name_div" th:utext="${product.productname}" ><b>Product Name</b></div>
