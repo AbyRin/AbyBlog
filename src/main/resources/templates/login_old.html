@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to AbyBlog</title>
+    <link rel="shortcut icon" href="/image/img_bg/web_icon.png">
+    <link rel="stylesheet" type="text/css" href="/css/sign.css">
+    <script src="/js/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="/js/login_ajax.js"></script>
+</head>
+
+<body>
+<div class="sign_container">
+    <div id="top" th:insert="top.html"></div>
+
+    <div class="sign_div">
+        <form>
+            <table>
+                <tr>
+                    <td class="td_sign_in" colspan="3">SIGN IN</td>
+                </tr>
+                <tr>
+                    <td class="td_cell">Account</td>
+                    <td class="td_cell">
+                        <input type="text" name="email" id="username" />
+                    </td>
+                    <td class="td_cell">
+                        <span class="span_warn"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_cell">Password</td>
+                    <td class="td_cell">
+                        <input type="password" name="password" />
+                    </td>
+                    <td class="td_cell">
+                        <span class="span_warn"></span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="sign_button">
+                <td>
+                    <input class="button" type="submit" name="s" value="登录">
+                </td>
+                <span class="span_warn"></span>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

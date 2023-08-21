@@ -5,31 +5,6 @@ body{
     */
     background: #eeeeee ;
 }
-.left_div {
-    width: 220px;
-    height: auto;
-    background-image: url('../image/reference_materials/universe/img_1.png');
-    background-size: cover
-}
-
-.right_div {
-    width: 220px;
-    height: auto;
-    background-image: url('../image/reference_materials/universe/img_1.png');
-    background-size: cover
-}
-
-/* 右侧标题 */
-.right_div span{
-    color: #ABA0E6;
-}
-.right_div p {
-    max-width: 220px;
-    font: 400 14px '';
-    margin-bottom: 40px;
-}
-
-
 
 .span_warn {
     color: #f84f52;

@@ -15,40 +15,33 @@
     <div id="top" th:insert="top.html"></div>
 
     <div class="sign_div">
-        <form>
-            <table>
-                <tr>
-                    <td class="td_sign_in" colspan="3">SIGN IN</td>
-                </tr>
-                <tr>
-                    <td class="td_cell">Account</td>
-                    <td class="td_cell">
-                        <input type="text" name="email" id="username" />
-                    </td>
-                    <td class="td_cell">
-                        <span class="span_warn"></span>
-                    </td>
-                </tr>
+        <div class="left_div"></div>
+        <!-- 右侧 -->
+        <div class="right_div">
+            <p>Welcome to <span>AbyBlog</span></p>
 
-                <tr>
-                    <td class="td_cell">Password</td>
-                    <td class="td_cell">
-                        <input type="password" name="password" />
-                    </td>
-                    <td class="td_cell">
-                        <span class="span_warn"></span>
-                    </td>
-                </tr>
-            </table>
-
-            <div class="sign_button">
-                <td>
-                    <input type="submit" name="s" value="登录"/>
-                </td>
-                <span class="span_warn"></span>
+            <!-- 账号部分 -->
+            <div class="account_div">
+                <!--
+                <i class="iconfont icon-email"></i>
+                -->
+                <input placeholder="Account">
             </div>
 
-        </form>
+            <!-- 密码部分 -->
+            <div class="password_div">
+                <!--
+                <i class="iconfont icon-mima"></i>
+                -->
+                <input placeholder="Password">
+            </div>
+
+            <button type="submit" name="s">Log in</button>
+            <!-- 登录警告文字 -->
+            <span class="span_warn"></span>
+            <!-- 跳转: 注册页面 -->
+            <a href="#">Go to Register</a>
+        </div>
     </div>
 </div>
 

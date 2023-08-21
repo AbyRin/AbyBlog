@@ -1,10 +1,10 @@
-package com.cpr.cprblog.controller;
+package com.aby.abyblog.controller;
 
-import com.cpr.cprblog.common.MD5Util;
-import com.cpr.cprblog.entity.Member;
-import com.cpr.cprblog.entity.Product;
-import com.cpr.cprblog.service.MemberService;
-import com.cpr.cprblog.service.ProductService;
+import com.aby.abyblog.entity.Member;
+import com.aby.abyblog.service.MemberService;
+import com.aby.abyblog.service.ProductService;
+import com.aby.abyblog.common.MD5Util;
+import com.aby.abyblog.entity.Product;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -56,6 +56,7 @@ public class IndexController {
         return "index";
     }
 
+    /* 跳转至: 登陆页面 */
     @RequestMapping ("/index/toLogin")
     public String toLogin(){
         return "login";
@@ -74,17 +75,20 @@ public class IndexController {
         }
     }
 
+    /* 登出 */
     @RequestMapping("/index/toLogout")
     public String logout(HttpSession session){
         session.setAttribute("member", null);
         return "redirect:/index";
     }
 
+    /* 跳转至: 注册页面 */
     @RequestMapping ("/index/toRegister")
     public String toRegister(){
         return "register";
     }
 
+    /* 注册页面: 检查E-mail是否可用 */
     @RequestMapping("/index/checkemail")
     @ResponseBody
     public String checkemail(String email){
@@ -95,12 +99,13 @@ public class IndexController {
         }
     }
 
+    /* 注册功能 */
     @RequestMapping("/index/doRegister")
     @ResponseBody
     public String doRegister(String email, String passw1, HttpSession session) {
 
         if(memberService.existsById(email)){
-            return "该emall已被注册";
+            return "该E-mall已被注册";
         }else {
 
             Member member1=new Member();
@@ -112,13 +117,14 @@ public class IndexController {
         }
     }
 
-    /* 商店页面 */
+    /* 跳转至: 商店页面 */
     @RequestMapping("/store")
     public String store(Model model){
         model.addAttribute("productlist",productService.findAll());
         return "store";
     }
 
+    /* 跳转至: 商品详情 */
     @RequestMapping("/store/productdetail")
     public String productdetail(String productid, Model model){
         Product product=productService.findById(productid);

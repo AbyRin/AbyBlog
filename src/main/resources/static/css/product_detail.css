@@ -3,7 +3,7 @@ body{
     background-size: cover;
     background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
     */
-    background: #EAE3CB ;
+    background: #eeeeee ;
 }
 .container{
     display: flex;
@@ -49,7 +49,7 @@ a, p {
 .product_div {
     width:1200px;
     height: 500px;
-    margin-top: 80px;
+    margin-top: 50px;
 
     text-align:center;
 }

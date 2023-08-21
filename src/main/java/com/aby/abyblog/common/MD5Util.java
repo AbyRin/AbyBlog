@@ -1,4 +1,4 @@
-package com.cpr.cprblog.common;
+package com.aby.abyblog.common;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

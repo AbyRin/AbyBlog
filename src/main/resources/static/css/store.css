@@ -58,12 +58,14 @@ td {
 .container .search_div input[name=minprice], .container .search_div input[name=maxprice]{
     width:60px;
 }
+/*
 .container .search_div .icon-search{
     background: url(static/image/img_bg/mirror_by_icons8.png) no-repeat;
     position: absolute;
     top: 0;
     left: 0;
 }
+*/
 .container .search_div input[type=submit]{
     border-style:none;
     width:60px;
