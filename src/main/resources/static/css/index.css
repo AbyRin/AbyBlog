@@ -247,7 +247,7 @@ p, a {
     float: right;
     margin-right: 0;
 
-    background-color: #706e6f;
+    background-color: rgb(078, 157, 169);
 }
 .circle_4 a{
     font-size: 40px;
