@@ -1,4 +1,259 @@
 body{
+    /*
     background-size: cover;
-    background: url("../image/background/bg_sea.jpg") no-repeat fixed;
+    background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
+    */
+    background: #dddddd;
+
+}
+
+td {
+    font-family: frutiger sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: Center;
+
+    background-color: #eeeeee;
+}
+
+/* ------------------------------------------------------------------------- */
+/* 话题搜索条部分 */
+.container .search_div{
+    width: 1200px;
+    height: 40px;
+
+    float: left;
+
+    color: #ffffff;
+    font-weight: bold;
+
+    background-color: #31384f;
+    /* backdrop-filter: blur(50px); */
+
+    margin-top: 30px;
+
+    line-height: 40px;
+}
+.container .search_div .input_span{
+    height: 40px;
+    margin: 0 0 0 40px;
+}
+
+.container .search_div .input_span .comment_class {
+    width: 60px;
+    height: 26px;
+}
+
+.container .search_div input[type=text]{
+    border: 1px solid #D4D4D4;
+    height:20px;
+}
+.container .search_div input[name=name], .container .search_div input[name=category]{
+    width:120px;
+}
+.container .search_div input[name=minprice], .container .search_div input[name=maxprice]{
+    width:60px;
+}
+.container .search_div .icon-search{
+    /* background: url(static/image/img_bg/mirror_by_icons8.png) no-repeat; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container .search_div input[type=submit]{
+    border-style:none;
+    width:60px;
+    height:30px;
+    cursor: pointer;
+
+    color: #ffffff;
+    background-color: #f84f52;
+
+    margin-left: 40px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+/* 话题分类开关 */
+.switch {
+    display: flex;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Size */
+    height: 2rem;
+    width: 4rem;
+
+    /* Demo */
+    margin-bottom: 0.5rem;
+}
+
+.switch__input {
+    /* Hide the input */
+    display: none;
+}
+
+.switch__circle {
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Size */
+    width: 2rem;
+
+    background-color: #fff;
+}
+/* The switch comes with two variants. */
+/* ON status */
+.switch--on {
+    background-color: #357edd;
+    border: 1px solid #357edd;
+
+    /* Push the circle to the right */
+    justify-content: flex-end;
+}
+
+/* OFF status */
+.switch--off {
+    background-color: #d1d5db;
+    border: 1px solid #d1d5db;
+}
+.switch--off .switch__circle {
+    border: 1px solid #d1d5db;
+}
+
+
+
+/* ------------------------------------------------------------------------- */
+/* 话题展示部分 */
+.comment_container{
+    width: 1200px;
+    backdrop-filter: blur(50px);
+
+    margin-top: 20px;
+}
+
+/* 话题块 */
+.comment_div{
+    width:600px;
+    height:320px;
+
+    margin: 15px 0 40px 40px;
+
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px #bdbdbd;
+}
+
+/* 左边区 ------------------------------------------- */
+.comment_left {
+    float: left;
+
+    width: 140px;
+    height: 320px;
+
+    background-color: #31384f;
+}
+
+/* 头像 与 昵称 */
+.user_photo {
+    width: 100px;
+    height: 100px;
+
+    margin: 20px;
+
+    /* background-color: #a8b5e0; */
+    text-align: center;
+}
+.user_photo img{
+    height: 100px;
+
+    border-radius: 50%;
+}
+.user_name {
+    text-align: center;
+}
+.user_name p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #eeeeee;
+}
+/* 功能键: 关注 */
+.comment_follow {
+    float: left;
+
+    width: 100px;
+    height: 36px;
+
+    background-color: #2c9c92;
+    border-radius: 20px;
+
+    text-align: center;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #eeeeee;
+
+    margin-top: 24px;
+    margin-left: 20px;
+}
+
+/* 右边区 ------------------------------------------- */
+.comment_right {
+    float: left;
+
+    width: 460px;
+    height: 320px;
+}
+
+/* 话题框 */
+.comment_content{
+    width: 460px;
+    height: 280px;
+    background-color: #ffffff;
+}
+
+/* 功能区 ------------------------------- */
+.comment_function_div {
+    width: 460px;
+    height: 40px;
+    background-color: #ffffff;
+    backdrop-filter: blur(50px);
+}
+/* box-shadow: 水平阴影位置, 垂直阴影的位置, 模糊距离, 阴影的大小, 阴影的颜色, 内侧阴影 */
+
+/* 功能键 */
+.function_button{
+    display: inline-block;
+    width: auto;
+    height: 36px;
+    border-radius: 4px;
+    margin: 0 0 4px 4px;
+
+    padding: 0 20px;
+
+    color: #878a8c;
+    
+    line-height: 36px;
+    cursor: pointer;
+}
+.function_button:hover{
+    background-color: #E8E8E8;
+}
+.function_button a{
+    vertical-align: middle;
+    height:36px;
+
+    font-size: 16px;
+    font-weight: 200;
+    color:#666666;
+    text-decoration: none;
+}
+.function_button img{
+    vertical-align: middle;
+    height: 24px;
 }

@@ -58,12 +58,6 @@ td {
 .container .search_div input[name=minprice], .container .search_div input[name=maxprice]{
     width:60px;
 }
-.container .search_div .icon-search{
-    background: url(static/image/img_bg/mirror_by_icons8.png) no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 .container .search_div input[type=submit]{
     border-style:none;
     width:60px;
@@ -89,8 +83,12 @@ td {
     margin-top: 20px;
 }
 
-.product_div{
+.product_div {
     float: left;
+}
+/* 话题块 */
+.product_div{
+    /* float: left; */
 
     width:200px;
     height:320px;
