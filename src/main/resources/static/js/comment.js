@@ -28,3 +28,18 @@ tx.addEventListener('input', function() {
     // console.log(tx.value.length);
     total.innerHTML = `${tx.value.length}/200字`;
 })
+// 4. 案例: 仅在按下 回车键时 发布评论（使用结构: list）
+tx.addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') {
+        // 若用户输入不为空，就显示和打印
+        if (tx.value.trim() !== '') {
+        // if (tx.value.trim()) {  //另一种写法
+            item.style.display = 'block';
+            text.innerHTML = tx.value;  // 用户输入内容
+        }
+        // 按下回车键，清空文本域
+        tx.value = ''  // Tip: trim()方法，去除字符串前后的空格
+        // 按下回车后，字符统计复原
+        total.innerHTML = '0/200字'
+    }
+})

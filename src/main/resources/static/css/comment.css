@@ -316,13 +316,34 @@ td {
     transition: all 0.5s;
 }
 
+/* 评论展示部分 */
 .list {
     min-width: 400px;
     max-width: 800px;
     display: flex;
 }
-
 .list .item {
     width: 100%;
     display: flex;
+}
+.list .item .info{
+    flex: 1;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 10px;
+}
+.list .item p {
+    margin: 0;
+}
+.list .item .name {
+    color: #FB7299;
+    font-size: 16px;
+    font-weight: bold;
+}
+.list .item .text {
+    color: #333;
+    padding: 10px 0;
+}
+.list .item .time {
+    color: #999;
+    padding: 12px 0;
 }
