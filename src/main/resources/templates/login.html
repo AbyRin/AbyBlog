@@ -15,40 +15,36 @@
     <div id="top" th:insert="top.html"></div>
 
     <div class="sign_div">
-        <form>
-            <table>
-                <tr>
-                    <td class="td_sign_in" colspan="3">SIGN IN</td>
-                </tr>
-                <tr>
-                    <td class="td_cell">Account</td>
-                    <td class="td_cell">
-                        <input type="text" name="email" id="username" />
-                    </td>
-                    <td class="td_cell">
-                        <span class="span_warn"></span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="td_cell">Password</td>
-                    <td class="td_cell">
-                        <input type="password" name="password" />
-                    </td>
-                    <td class="td_cell">
-                        <span class="span_warn"></span>
-                    </td>
-                </tr>
-            </table>
-
-            <div class="sign_button">
-                <td>
-                    <input type="submit" name="s" value="登录"/>
-                </td>
+        <div>
+            <div class="div_sign_in" colspan="3">SIGN IN</div>
+        </div>
+        <div>
+            <div class="div_cell">Account</div>
+            <div class="div_cell">
+                <input type="text" name="email" id="username" value="E-mail" />
+            </div>
+            <div class="div_cell">
                 <span class="span_warn"></span>
             </div>
+        </div>
 
-        </form>
+        <div>
+            <div class="div_cell">Password</div>
+            <div class="div_cell">
+                <input type="password" name="password" value="Password" />
+            </div>
+            <div class="div_cell">
+                <span class="span_warn"></span>
+            </div>
+        </div>
+
+        <div class="sign_button">
+            <div>
+                <input type="submit" name="s" value="登录"/>
+            </div>
+            <span class="span_warn"></span>
+        </div>
+
     </div>
 </div>
 
