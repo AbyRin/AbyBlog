@@ -1,10 +1,13 @@
+* {
+    scroll-behavior: smooth;
+}
 body{
     /*
     background-size: cover;
     background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
     */
+    height: 100%;
     background: #dddddd;
-
 }
 
 td {
@@ -23,6 +26,8 @@ td {
 
 /* 商品搜索条部分 */
 .container .search_div{
+    z-index: 100;
+
     width: 1200px;
     height: 40px;
 
@@ -32,7 +37,6 @@ td {
     font-weight: bold;
 
     background-color: #31384f;
-    /* backdrop-filter: blur(50px); */
 
     margin-top: 30px;
 
