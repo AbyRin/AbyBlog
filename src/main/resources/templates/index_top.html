@@ -23,12 +23,12 @@
                     <div>
                         <a th:if="${session.member}">
                             <a href="/index/toLogout">Sign Out</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="/index/toRegister">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <!-- <a href="/index/toRegister">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
                             <a href="/admin/toAdminLogin">Sign In as Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                         <a th:unless="${session.member}">
                             <a href="/index/toLogin">Sign In</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="/index/toRegister">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <!-- <a href="/index/toRegister">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
                             <a href="/admin/toAdminLogin">Sign In as Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>

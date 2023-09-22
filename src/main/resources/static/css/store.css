@@ -38,6 +38,9 @@ td {
 
     line-height: 40px;
 }
+.container .search_div form{
+    width: 1200px;
+}
 .container .search_div .input_span{
     height: 40px;
     margin: 0 0 0 40px;
@@ -214,4 +217,76 @@ td {
 #collect_div a:hover{
     background-color: #f84f52;
     color: #ffffff;
+}
+
+
+/* 功能: 电梯 */
+/* 电梯本体 */
+.elevator {
+    position: fixed;
+    width: 80px;
+    height: auto;
+
+    left: 50%;
+    margin-left: 604px;
+    top: 280px;
+    z-index: 100;
+    
+    /* (已修改方案) */
+    /* 初始隐藏电梯，页面向下滑动时伴随 商品搜索条 出现 */
+    /* opacity: 0; */
+
+    text-align: center;
+    transition: all .5s;
+}
+
+/* 分类 */
+.elevator .elevator_list {
+    /* position: relative; */
+
+    width: 80px;
+    height: auto;
+
+    background: #fff;
+
+    margin: 0;
+}
+
+.elevator .elevator_list li {
+    height: 50px;
+    line-height: 50px;
+
+    border: 1px solid #b2b2b2;
+
+    list-style-type: none;
+}
+
+.elevator .elevator_list li a {
+    display: block;
+
+    width: 80px;
+    height: 50px;
+
+    text-decoration: none;
+}
+
+.elevator .elevator_list li a:hover,
+.elevator .elevator_list li a.active {
+    color: #27BA9B;
+}
+
+.elevator .elevator_list li a i {
+    position: relative;
+
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    left: 4px
+    ;
+    background-position: 8px -106px;
+
+    font-size: 20px;
+    transform: rotate(-90deg);
 }

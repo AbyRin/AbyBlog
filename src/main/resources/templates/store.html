@@ -14,7 +14,7 @@
 
     <!-- 商品搜索条部分 -->
     <div class="search_div">
-        <form method="post" action="" style="width: 1000px;">
+        <form method="post" action="">
             <span class="input_span">Name
                 <input type="text" name="productname" />
             </span>
@@ -57,7 +57,36 @@
         </div>
 
     </div>
-
 </div>
+
+<!-- 功能: 电梯 -->
+<div class="elevator">
+    <ul class="elevator_list">
+        <li><a href="javascript:;" data-name="class_1">Class-1</a></li>
+        <li><a href="javascript:;" data-name="class_2">Class-2</a></li>
+        <li><a href="javascript:;" data-name="class_3">Class-3</a></li>
+        <li><a href="javascript:;" data-name="class_4">Class-4</a></li>
+        <li><a href="javascript:;" id="backTop">Top</a></li>
+    </ul>
+</div>
+
+<!-- 测试用 -->
+<!-- <script type="text/javascript" src="/js/public.js"></script>
+<script>
+    console.log(document.querySelector('.class_1'))
+    
+    const ele = document.querySelector('.elevator_list li a')
+    console.log(ele.dataset.name)
+</script> -->
+<script>
+    const search = document.querySelector('.search_div')
+    const n = document.documentElement.scrollTop 
+    console.log(search.style)
+
+    // 获取html滚动像素
+    console.log('html滚动像素为' + document.documentElement.scrollTop) // 0
+
+    console.log(search.offsetTop)
+</script>
 </body>
 </html>
