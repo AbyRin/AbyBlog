@@ -1,4 +1,5 @@
 body {
+    width: 100%;
     display: flex;
 
     align-items: center;
@@ -9,10 +10,25 @@ p, a, span {
 }
 
 .top_container {
-    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    border: 0;
+
+    width: 100%;
+    height: 140px;
+
+    background: #31384f;
+}
+.top_div {
+    position: relative;
+    margin: 0 auto;
 
     width: 1200px;
-    height: 100px;
+    height: 140px;
+
+    background: #31384f;
 }
 /* 图标 */
 .icon_div {
@@ -52,98 +68,129 @@ p, a, span {
 /* 登入登出栏 */
 .account_div {
     float: left;
-    margin-left: 20px;
 
     height:40px;
 }
 .account_div a {
+    margin-left: 12px;
+
     font-size: 15px;
     text-align:left;
     line-height: 40px;
 
     text-decoration:none;
+    color: #ffffff;
 }
 .account_div a:link {
-    color: #31384f;
+    color: #ffffff;
 }
 .account_div a:hover {
     color: #f84f52;
 }
-.account_div a:visited {
-    color: #31384f;
-}
+/* .account_div a:visited {
+    color: #ffffff;
+} */
 
 /* 功能键 */
 .function_div {
-    float: left;
+    display: flex;
+    justify-content: flex-start;
+
+    float: right;
 
     width:400px;
-    height:40px;
-    margin-right: 0;
-
-    text-align: right;
+    height:64px;
 }
-.function_div a {
-    font-size: 18px;
-    font-weight: bold;
+.function_div .each_function {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    float: right;
+    
+    width:100px;
+    height:64px;
+
+    text-align: center;
+
+    border-left: 1px solid #706e6f;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.function_div .each_function:hover {
+    background-color: #f84f52;
+}
+.function_div .each_function img{
+    height: 30px;
+}
+.function_div .each_function a {
+    margin-top: 2px;
+    font-size: 15px;
+    /* font-weight: bold; */
     text-align:right;
-    line-height: 40px;
 
     text-decoration:none;
+    color: #ffffff;
 }
-.function_div a:link {
-    color: #31384f;
+.function_div .each_function a:link {
+    color: #ffffff;
 }
-.function_div a:hover {
+/* .function_div .each_function a:hover {
     color: #f84f52;
-}
-.td_function a:visited {
-    color: #31384f;
-}
+} */
+/* .td_function .each_function a:visited {
+    color: #ffffff;
+} */
 
 /* 分页栏 */
 .page_div {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+
     float: left;
 
-    background-color: #eeeeee;
+    background-color: #ffffff;
 
     width: 1200px;
     height: 40px;
 
-    text-align: center;
+    /* border-bottom:#31384f solid 2px; */
+    border-radius: 40px;
+}
+.each_page {
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+
     line-height: 40px;
+    text-align: center;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    border-radius: 40px;
 }
-.page_div_2{
-    align-content: center;
-
-    width: 1200px;
-    height: 40px;
-
-    border-bottom:#31384f solid 2px;
+.each_page:hover {
+    background-color: #e7e7e7;
 }
-
-.page_div_2 a {
+.each_page a {
     color: #31384f;
 
-    font-weight:bold;
-    font-size:medium;
-    text-decoration:none;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
 }
-
-.page_div_2 span {
-    color: #31384f;
-
-    font-weight:bold;
-    font-size:medium;
-    text-decoration:none;
-}
-.page_div_2 span:link {
+.each_page a:link {
     color: #31384f;
 }
-.page_div_2 span:hover {
+/* .each_page a:hover {
     color: #f84f52;
-}
-.page_div_2 span:visited {
+} */
+.each_page a:visited {
     color: #31384f;
 }
 

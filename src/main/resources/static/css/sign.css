@@ -12,13 +12,14 @@ p {
 
 /* 底色 */
 .sign_container {
-    background-color: #eeeeee;
+    /* background-color: #eeeeee; */
 
     display: flex;
     flex-direction: column;
 
     /* justify-content: center; */
     align-items: Center;
+    margin-top: 160px;
 }
 
 .sign_div {
@@ -26,12 +27,11 @@ p {
     height: 600px;
 
     border:0;
-    margin: 80px 0 40px 0;
 
     background-color: #ffffff;
     border-radius: 20px;
 
-    box-shadow: 5px 5px 5px #bdbdbd;
+    box-shadow: 3px 3px 3px #bdbdbd;
 
     /* backdrop-filter: blur(50px); */
 
@@ -153,6 +153,7 @@ p {
     color: #ffffff;
 
     transition: background-color .2s ease-in-out;
+    cursor: pointer;
 }
 
 .sign_button input:hover{

@@ -3,15 +3,17 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
     <title>AbyBlog-ProductDetail: 为你展示商品详情！</title>
-	<link href="/css/product_detail.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/css/product_detail.css">
     <link rel="shortcut icon" href="/image/img_bg/web_icon.png">
     <title>AbyBlog-Product Detail</title>
 </head>
 
 <body>
-<div class="container">
-    <div class="top" th:insert="/top.html"></div>
+<!-- 顶部 -->
+<div class="top" th:insert="/top.html"></div>
 
+<!-- 网页主要内容 -->
+<div class="container">
     <!-- 按钮-返回上页
     <div class="location">
         <a href="javascript:history.back(1)">&nbsp;&nbsp;Back</a>
@@ -28,25 +30,33 @@
         <div class="information_div">
             <!-- 商品名 -->
             <div class="product_name_div">
-                <span th:text="${product.productname}"/>
+                <span th:text="${product.productname}">
             </div>
+
             <!-- 商品说明 -->
             <div class="product_description_div">
-                <p class="description_title">Description</p>
-                <p class="description_content" th:text="${product.illustrate}"/>
+                <p class="description_title">商品描述</p>
+                <p class="description_content" th:text="${product.illustrate}">
+                <p class="description_title">商品价格</p>
+                <p class="description_content" th:text="${product.price}"></p>
             </div>
-            <!-- 商品价格 -->
-            <div class="price_div">
-                <span th:text="${product.price}+' CNY'"></span>
-            </div>
+            
             <!-- 按钮-收藏 -->
-            <button class="button_collect" onclick="">
-                <span th:href="'/collect/addcollect?productid='+${product.productid}">⭐ Collect</span>
+            <button class="detail_button" data-name="det_btn_collect" onclick="">
+                <a th:href="'/collect/addcollect?productid='+${product.productid}">
+                    <img src="/image/icon/icons8-star-96.png" alt="">
+                    Collect
+                </a>
             </button>
+
             <!-- 按钮-加购 -->
-            <button class="button_add_cart" onclick="">
-                <span th:href="'/cart/addcart?productid='+${product.productid}">🛒 Add to Cart</span>
+            <button class="detail_button" data-name="det_btn_cart" onclick="">
+                <a th:href="'/cart/addcart?productid='+${product.productid}">
+                    <img src="/image/icon/icons8-cart-96.png" alt="">
+                    Add to Cart
+                </a>
             </button>
+
         </div>
     </div>
 
@@ -76,10 +86,10 @@
 
                 <div class="td_evaluate_time_ip">
                     评价时间
-                    <span th:text="${shoplist.pjtime}"/>
+                    <span th:text="${shoplist.pjtime}">
                     &nbsp;&nbsp;&nbsp;
                     IP
-                    <span th:text="${shoplist.pjip}"/>
+                    <span th:text="${shoplist.pjip}">
                 </div>
             </div>
 
@@ -94,6 +104,27 @@
         <!--评价循环结束 -->
     </div>
 </div>
+
+<script>
+(function () {
+    const det_btns = document.querySelectorAll('.detail_button')
+    const det_btn_imgs = document.querySelectorAll('.detail_button a img')
+
+    det_btns[0].addEventListener('mouseenter', function () {
+        det_btn_imgs[0].src = '/image/icon/icons8-star-30.png'
+    })
+    det_btns[0].addEventListener('mouseleave', function () {
+        det_btn_imgs[0].src = '/image/icon/icons8-star-96.png'
+    })
+    
+    det_btns[1].addEventListener('mouseenter', function () {
+        det_btn_imgs[1].src = '/image/icon/icons8-cart-30.png'
+    })
+    det_btns[1].addEventListener('mouseleave', function () {
+        det_btn_imgs[1].src = '/image/icon/icons8-cart-96.png'
+    })
+})();
+</script>
 
 </body>
 </html>

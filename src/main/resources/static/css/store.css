@@ -6,6 +6,11 @@ body{
     background-size: cover;
     background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
     */
+    display: flex;
+    flex-direction: column;
+
+
+
     height: 100%;
     background: #dddddd;
 }
@@ -17,11 +22,13 @@ td {
 .container{
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: Center;
 
+    margin-top: 140px;
+
     background-color: #eeeeee;
+    box-shadow: 2px 2px 2px #bdbdbd;
 }
 
 /* 商品搜索条部分 */
@@ -38,9 +45,9 @@ td {
 
     background-color: #31384f;
 
-    margin-top: 30px;
-
     line-height: 40px;
+
+    padding: 0;
 }
 .container .search_div form{
     width: 1200px;
@@ -51,14 +58,25 @@ td {
 }
 
 .container .search_div .input_span .product_class {
-    width: 60px;
+    width: 90px;
     height: 26px;
 }
 
 .container .search_div input[type=text]{
-    border: 1px solid #D4D4D4;
+    border: 2px solid #D4D4D4;
+    width: 60px;
     height:20px;
+
+    border-radius: 20px;
+    text-indent: 4px;
+    outline: none;
+
+    transition: width .3s;
 }
+.container .search_div input[name=product_name]:focus{
+    width: 160px;
+}
+
 .container .search_div input[name=name], .container .search_div input[name=category]{
     width:120px;
 }
@@ -67,7 +85,7 @@ td {
 }
 .container .search_div input[type=submit]{
     border-style:none;
-    width:60px;
+    width:64px;
     height:30px;
     cursor: pointer;
 
@@ -76,7 +94,8 @@ td {
 
     margin-left: 40px;
 
-    font-size: 15px;
+    text-align: center;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -85,7 +104,6 @@ td {
     float: left;
 
     width: 1000px;
-    backdrop-filter: blur(50px);
 
     margin-top: 20px;
 }
@@ -232,7 +250,7 @@ td {
     height: auto;
 
     left: 50%;
-    margin-left: 604px;
+    margin-left: 620px;
     top: 280px;
     z-index: 100;
     
@@ -254,13 +272,18 @@ td {
     background: #fff;
 
     margin: 0;
+    padding: 0;
+
+    box-shadow: 5px 5px 5px #bdbdbd;
 }
 
 .elevator .elevator_list li {
+    width: auto;
     height: 50px;
     line-height: 50px;
 
-    border: 1px solid #b2b2b2;
+    border: 1px solid #dcdcdc;
+    margin: 0;
 
     list-style-type: none;
 }
@@ -268,15 +291,18 @@ td {
 .elevator .elevator_list li a {
     display: block;
 
-    width: 80px;
+    width: auto;
     height: 50px;
 
     text-decoration: none;
+
+    color: #31384f;
 }
 
 .elevator .elevator_list li a:hover,
 .elevator .elevator_list li a.active {
-    color: #27BA9B;
+    background-color: #f84f52;
+    color: #ffffff;
 }
 
 .elevator .elevator_list li a i {

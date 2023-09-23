@@ -12,7 +12,10 @@ p {
 
 /* 总盒子 */
 .container {
+    margin-top: 140px;
     background-color: #eeeeee;
+
+    box-shadow: 2px 2px 2px #bdbdbd;
 }
 
 .about_div {
@@ -24,8 +27,6 @@ p {
     
     justify-content: center;
     align-items: Center;
-    
-    margin-top: 42px;
 
     background-color: #ffffff;
 }
@@ -46,7 +47,7 @@ p {
 .big_name {
     font-size: 24px;
     font-weight: bold;
-    color: #eeeeee;
+    color: #ffffff;
 
     margin-top: 8px;
 }

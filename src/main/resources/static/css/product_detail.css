@@ -3,15 +3,22 @@ body{
     background-size: cover;
     background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
     */
-    background: #EAE3CB ;
+    background: #dddddd ;
 }
 .container{
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: Center;
+
+    margin-top: 140px;
+    width: 1400px;
+
+    background-color: #eeeeee;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #bdbdbd;
 }
+
 a, p {
     font-family: Arial, sans-serif;
 }
@@ -49,9 +56,8 @@ a, p {
 .product_div {
     width:1200px;
     height: 500px;
-    margin-top: 80px;
 
-    text-align:center;
+    margin-top: 20px;
 }
 /* 商品图片div */
 .picture_div {
@@ -61,10 +67,13 @@ a, p {
     width: 500px;
     height: 500px;
 
-    background-color: #8f8f8f;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #bdbdbd;
 }
 .picture_div img{
     width: 500px;
+    border-radius: 10px;
 }
 
 /* 商品信息div */
@@ -76,8 +85,9 @@ a, p {
     width: 660px;
     height: 500px;
 
-    background-color: rgba(255,255,255,0.4);
-    backdrop-filter: blur(50px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #bdbdbd;
 }
 /* 商品名div */
 .product_name_div {
@@ -87,17 +97,16 @@ a, p {
     width: 660px;
     height: 50px;
 
-    color: #3e4651;
+    color: #000000;
     text-align: left;
     line-height: 50px;
     font-weight: bold;
     font-size: 25px;
 
     background-color: rgba(255,255,255,0.4);
-    backdrop-filter: blur(50px);
 }
 .product_name_div span{
-    margin-left: 30px;
+    margin-left: 16px;
 }
 /* 商品描述div */
 .product_description_div {
@@ -109,68 +118,58 @@ a, p {
 
     background-color: rgba(255,255,255,0.4);
     backdrop-filter: blur(50px);
-    border-top: 1px solid #696972;
+    border-top: 1px solid #b2b2b2 ;
 }
 .product_description_div .description_title{
     width: 660px;
 
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bolder;
-    text-align: center;
+
+    margin-left: 16px;
 }
 .product_description_div .description_content{
-    width: 640px;
-    margin-left: 30px;
+    width: 610px;
+    margin: 0 30px;
 
     font-size: 16px;
-    text-align: left;
+    text-indent: 2rem;
 }
-/* 商品价格div */
-.price_div {
-    float: left;
-    display: inline;
-
-    width: 220px;
-    height: 50px;
-
-    font-size: 20px;
-    line-height: 50px;
-
-    background-color:#ffffff;
-}
-/* 按钮-收藏 */
-.button_collect {
-    float: left;
-    display: inline;
-
-    width: 220px;
-    height: 50px;
-    background-color: #f8c84f;
-
-    color: #f6f1e2;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 50px;
+/* 按钮 */
+.detail_button {
+    display: inline-block;
+    width: 200px;
+    height: 42px;
+    border-radius: 8px;
+    margin: 0 0 8px 6px;
 
     border: 0;
+    
+    line-height: 36px;
+    cursor: pointer;
+
+    transition: background-color .3s;
 }
-/* 按钮-加购 */
-.button_add_cart {
-    float: left;
-    display: inline;
+.detail_button:hover{
+    background-color: #bfc1c2;
+}
+.detail_button a{
+    vertical-align: middle;
 
-    width: 220px;
-    height: 50px;
-    background-color:#f84f52;
+    font-size: 22px;
+    font-weight: 200;
+    color:#666666;
 
-    color: #f6f1e2;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 50px;
+    text-decoration: none;
 
-    border: 0;
+    transition: color .3s;
+}
+.detail_button:hover a{
+    color: #ffffff;
+}
+.detail_button a img{
+    vertical-align: middle;
+    height: 30px;
 }
 
 /* 用户评价-标题 */
@@ -178,7 +177,7 @@ a, p {
     width:1200px;
     height:40px;
 
-    background-color: #F05D06;
+    background-color: #31384f;
     margin-top: 40px;
 }
 .evaluate_title_div a{
@@ -187,7 +186,7 @@ a, p {
     text-align:left;
     line-height: 40px;
 
-    color: #EAE3CB;
+    color: #ffffff;
     font-size: 20px;
     font-weight: bold;
 

@@ -14,11 +14,13 @@ td {
 .container{
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: Center;
 
+    margin-top: 140px;
+
     background-color: #eeeeee;
+    box-shadow: 2px 2px 2px #bdbdbd;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -34,8 +36,6 @@ td {
 
     background-color: #31384f;
     /* backdrop-filter: blur(50px); */
-
-    margin-top: 30px;
 
     line-height: 40px;
 }

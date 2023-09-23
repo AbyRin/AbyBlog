@@ -6,9 +6,9 @@ import jakarta.persistence.Id;
 @Entity(name="product")
 public class Product {
     @Id
-    private String productid;
-    private String productname;
-    private String productclass;
+    private String product_id;
+    private String product_name;
+    private String product_class;
     private String illustrate;
     private Integer price;
     private String picture;
@@ -16,27 +16,27 @@ public class Product {
 
     // 生成setter和getter方法
     public String getProductid() {
-        return productid;
+        return product_id;
     }
 
-    public void setProductid(String productid) {
-        this.productid = productid;
+    public void setProductid(String product_id) {
+        this.product_id = product_id;
     }
 
     public String getProductname() {
-        return productname;
+        return product_name;
     }
 
-    public void setProductname(String productname) {
-        this.productname = productname;
+    public void setProductname(String product_name) {
+        this.product_name = product_name;
     }
 
     public String getProductclass() {
-        return productclass;
+        return product_class;
     }
 
-    public void setProductclass(String productclass) {
-        this.productclass = productclass;
+    public void setProductclass(String product_class) {
+        this.product_class = product_class;
     }
 
     public String getIllustrate() {

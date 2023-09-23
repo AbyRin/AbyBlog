@@ -8,25 +8,33 @@
 </head>
 
 <body>
-<div class="container">
-    <!-- 顶部 -->
-    <div class="top" th:insert="/top.html"></div>
+<!-- 顶部 -->
+<div class="top" th:insert="/top.html"></div>
 
+<!-- 网页主要内容 -->
+<div class="container">
     <!-- 商品搜索条部分 -->
     <div class="search_div">
         <form method="post" action="">
+
+            <!-- 按商品名搜索 -->
             <span class="input_span">Name
                 <input type="text" name="productname" />
             </span>
+
+            <!-- 按商品分类搜索 -->
             <span class="input_span">Class
                 <select name="productclass" class="product_class">
                     <option value="">All</option>
                     <option th:each="productclass:${productclasses}" th:value="${productclass}" th:text="${productclass}"></option>
 				</select>
             </span>
+
+            <!-- 按价格区间搜索 -->
             <span class="input_span">Price Range
                 <input type="text" name="minprice"/> ~ <input type="text" name="maxprice" />
             </span>
+
             <input type="submit" value="Search">
         </form>
     </div>
@@ -55,7 +63,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -70,11 +77,12 @@
     </ul>
 </div>
 
+<!-- 底部 -->
+<div class="bottom" th:insert="/bottom.html"></div>
+
 <script type="text/javascript" src="/js/public.js"></script>
 
 <!-- 测试用 -->
-
-<script type="text/javascript" src="/js/public.js"></script>
 <!-- <script>
     console.log(document.querySelector('.class_1'))
     
@@ -95,6 +103,10 @@
     console.log('html滚动像素为' + document.documentElement.scrollTop)
 
     console.log(search.offsetTop)
+</script> -->
+<!-- <script>
+    const a = document.querySelector('#backTop')
+    console.log(a)
 </script> -->
 </body>
 </html>

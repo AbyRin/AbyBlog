@@ -1,24 +1,26 @@
-body {
-
-}
 p, a, span {
     font-family: Arial, sans-serif;
 }
-.orange_ring {
+.blue_ring {
+    /* position: fixed;
+    top: 0;
+    border: 0; */
+
     background: #31384f;
 
     width: 1400px;
     height: 700px;
     border-radius: 0 0 700px 700px;
+    box-shadow: 5px 5px 5px #ababab;
 }
-.brown_ring {
+.gray_ring {
     background: #706e6f ;
 
     width: 1200px;
     height: 600px;
     border-radius: 0 0 600px 600px;
 }
-.brown_ring_2 {
+.yellow_ring {
     background: #fec738;
 
     width: 1000px;
