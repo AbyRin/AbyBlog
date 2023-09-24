@@ -24,9 +24,9 @@ public class IndexController {
 
     /* 主页以 及 登陆注册系统 */
     @RequestMapping ("/index")
-    public String index(String productname, String productclass, String minprice, String maxprice, Model model){
-        List<String> productclasslist=productService.findclass();
-        model.addAttribute("productclasses",productclasslist);
+    public String index(String product_name, String product_class, String minprice, String maxprice, Model model){
+        List<String> product_classlist=productService.findclass();
+        model.addAttribute("product_classes",product_classlist);
         //为搜索条件设置默认值，并检索条件是否合法
         Integer _minPrice=0; //默认从0到最大值
         Integer _maxPrice = Integer.MAX_VALUE;
@@ -43,12 +43,12 @@ public class IndexController {
         }
 
         List<Product> products;
-        if(productname!=null && !"".equals(productname.trim()) && productclass!=null && !"".equals(productclass)) {
-            products = productService.searchproduct(productname, productclass, _minPrice, _maxPrice);
-        }else if(productname!=null && !"".equals(productname.trim())){
-            products = productService.searchproductbyfname(productname,_minPrice, _maxPrice);
-        }else if(productclass!=null && !"".equals(productclass.trim())){
-            products = productService.searchproductbyfclass(productclass,_minPrice, _maxPrice);
+        if(product_name!=null && !"".equals(product_name.trim()) && product_class!=null && !"".equals(product_class)) {
+            products = productService.searchproduct(product_name, product_class, _minPrice, _maxPrice);
+        }else if(product_name!=null && !"".equals(product_name.trim())){
+            products = productService.searchproductbyfname(product_name,_minPrice, _maxPrice);
+        }else if(product_class!=null && !"".equals(product_class.trim())){
+            products = productService.searchproductbyfclass(product_class,_minPrice, _maxPrice);
         }else{
             products = productService.searchproduct(_minPrice, _maxPrice);
         }
@@ -120,8 +120,8 @@ public class IndexController {
     }
 
     @RequestMapping("/store/productdetail")
-    public String productdetail(String productid, Model model){
-        Product product=productService.findById(productid);
+    public String productdetail(String product_id, Model model){
+        Product product=productService.findById(product_id);
         model.addAttribute("product", product);
         return "productdetail";
     }

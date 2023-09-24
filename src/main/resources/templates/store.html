@@ -19,14 +19,14 @@
 
             <!-- 按商品名搜索 -->
             <span class="input_span">Name
-                <input type="text" name="productname" />
+                <input type="text" name="product_name" />
             </span>
 
             <!-- 按商品分类搜索 -->
             <span class="input_span">Class
-                <select name="productclass" class="product_class">
+                <select name="product_class" class="product_class">
                     <option value="">All</option>
-                    <option th:each="productclass:${productclasses}" th:value="${productclass}" th:text="${productclass}"></option>
+                    <option th:each="product_class:${product_classes}" th:value="${product_class}" th:text="${product_class}"></option>
 				</select>
             </span>
 
@@ -44,22 +44,22 @@
 
         <!-- 商品展示块 -->
         <div class="product_div" th:each="product:${productlist}">
-            <a th:href="'/store/productdetail?productid='+${product.productid}">
+            <a th:href="'/store/productdetail?product_id='+${product.product_id}">
                 <img style="height: 200px; width: 200px;" th:src="@{'/image/img_product/'+${product.picture}}" alt=""/>
             </a>
-            <div id="product_class_div" th:utext="${product.productclass}" ><b>Product Class</b></div>
-            <div id="product_name_div" th:utext="${product.productname}" ><b>Product Name</b></div>
+            <div id="product_class_div" th:utext="${product.product_class}" ><b>Product Class</b></div>
+            <div id="product_name_div" th:utext="${product.product_name}" ><b>Product Name</b></div>
             <div id="product_price_div" th:utext="${product.price}+'CNY'" ><b>Price</b></div>
             <div id="product_sold_div" th:utext="'Sold '+${product.soldnum}">Sold Num</div>
             <div>
                 <!-- 加入购物车功能-->
                 <div id="gotocart_div">
-                    <a th:href="'/cart/addcart?productid='+${product.productid}"><b>Purchase</b></a>
+                    <a th:href="'/cart/addcart?product_id='+${product.product_id}"><b>Purchase</b></a>
                 </div>
 
                 <!-- 收藏功能 -->
                 <div id="collect_div">
-                    <a th:href="'/collect/addcollect?productid='+${product.productid}"><b>Collect</b></a>
+                    <a th:href="'/collect/addcollect?product_id='+${product.product_id}"><b>Collect</b></a>
                 </div>
             </div>
         </div>
@@ -69,11 +69,11 @@
 <!-- 功能: 电梯 -->
 <div class="elevator">
     <ul class="elevator_list">
-        <li><a href="javascript:;" data-name="class_1">Class-1</a></li>
-        <li><a href="javascript:;" data-name="class_2">Class-2</a></li>
-        <li><a href="javascript:;" data-name="class_3">Class-3</a></li>
-        <li><a href="javascript:;" data-name="class_4">Class-4</a></li>
-        <li><a href="javascript:;" id="backTop">Top</a></li>
+        <li><a href="javascript:" data-name="class_1">Class-1</a></li>
+        <li><a href="javascript:" data-name="class_2">Class-2</a></li>
+        <li><a href="javascript:" data-name="class_3">Class-3</a></li>
+        <li><a href="javascript:" data-name="class_4">Class-4</a></li>
+        <li><a href="javascript:" id="backTop">Top</a></li>
     </ul>
 </div>
 

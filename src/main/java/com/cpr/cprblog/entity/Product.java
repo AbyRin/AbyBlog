@@ -15,27 +15,28 @@ public class Product {
     private Integer soldnum;
 
     // 生成setter和getter方法
-    public String getProductid() {
+
+    public String getProduct_id() {
         return product_id;
     }
 
-    public void setProductid(String product_id) {
+    public void setProduct_id(String product_id) {
         this.product_id = product_id;
     }
 
-    public String getProductname() {
+    public String getProduct_name() {
         return product_name;
     }
 
-    public void setProductname(String product_name) {
+    public void setProduct_name(String product_name) {
         this.product_name = product_name;
     }
 
-    public String getProductclass() {
+    public String getProduct_class() {
         return product_class;
     }
 
-    public void setProductclass(String product_class) {
+    public void setProduct_class(String product_class) {
         this.product_class = product_class;
     }
 

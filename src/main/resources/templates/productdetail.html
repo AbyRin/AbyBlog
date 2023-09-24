@@ -30,7 +30,7 @@
         <div class="information_div">
             <!-- 商品名 -->
             <div class="product_name_div">
-                <span th:text="${product.productname}">
+                <span th:text="${product.product_name}"></span>
             </div>
 
             <!-- 商品说明 -->
@@ -43,7 +43,7 @@
             
             <!-- 按钮-收藏 -->
             <button class="detail_button" data-name="det_btn_collect" onclick="">
-                <a th:href="'/collect/addcollect?productid='+${product.productid}">
+                <a th:href="'/collect/addcollect?product_id='+${product.product_id}">
                     <img src="/image/icon/icons8-star-96.png" alt="">
                     Collect
                 </a>
@@ -51,7 +51,7 @@
 
             <!-- 按钮-加购 -->
             <button class="detail_button" data-name="det_btn_cart" onclick="">
-                <a th:href="'/cart/addcart?productid='+${product.productid}">
+                <a th:href="'/cart/addcart?product_id='+${product.product_id}">
                     <img src="/image/icon/icons8-cart-96.png" alt="">
                     Add to Cart
                 </a>
@@ -86,10 +86,10 @@
 
                 <div class="td_evaluate_time_ip">
                     评价时间
-                    <span th:text="${shoplist.pjtime}">
+                    <span th:text="${shoplist.pjtime}"></span>
                     &nbsp;&nbsp;&nbsp;
                     IP
-                    <span th:text="${shoplist.pjip}">
+                    <span th:text="${shoplist.pjip}"></span>
                 </div>
             </div>
 
