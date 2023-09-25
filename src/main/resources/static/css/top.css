@@ -156,23 +156,24 @@ p, a, span {
     background-color: #ffffff;
 
     width: 1200px;
-    height: 40px;
+    height: 36px;
 
     /* border-bottom:#31384f solid 2px; */
-    border-radius: 40px;
+    border-radius: 36px;
+    border: 2px solid #D4D4D4;
 }
 .each_page {
     width: 100px;
-    height: 40px;
+    height: 36px;
     margin: 10px;
 
-    line-height: 40px;
+    line-height: 36px;
     text-align: center;
 
     cursor: pointer;
     transition: background-color 0.3s;
 
-    border-radius: 40px;
+    border-radius: 36px;
 }
 .each_page:hover {
     background-color: #e7e7e7;
