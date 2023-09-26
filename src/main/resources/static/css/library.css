@@ -19,96 +19,48 @@ td {
     font-family: frutiger sans-serif;
 }
 
-.container{
+.library_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: Center;
 
     margin-top: 140px;
-
-    background-color: #eeeeee;
-    box-shadow: 2px 2px 2px #bdbdbd;
-}
-
-/* 商品搜索条部分 */
-.container .search_div{
-    z-index: 100;
-
-    width: 1200px;
-    height: 40px;
-
-    float: left;
-
-    color: #ffffff;
-    font-weight: bold;
+    width: 1400px;
 
     background-color: #31384f;
-
-    line-height: 40px;
-
-    padding: 0;
-}
-.container .search_div form{
-    width: 1200px;
-}
-.container .search_div .input_span{
-    height: 40px;
-    margin: 0 0 0 40px;
-}
-
-.container .search_div .input_span .product_class {
-    width: 90px;
-    height: 26px;
-}
-
-.container .search_div input[type=text]{
-    border: 2px solid #D4D4D4;
-    width: 60px;
-    height:20px;
-
     border-radius: 20px;
-    text-indent: 4px;
-    outline: none;
-
-    transition: width .3s;
+    box-shadow: 2px 2px 2px #bdbdbd;
 }
-.container .search_div input[name=product_name]:focus{
-    width: 160px;
+.container .sea_div {
+    width: 1400px;
+    height: 40px;
+
+    background-color: #eeeeee;
+    border-radius:  20px 20px 0 0;
+    box-shadow: 2px 2px 2px #bdbdbd;
 }
-
-.container .search_div input[name=name], .container .search_div input[name=category]{
-    width:120px;
-}
-.container .search_div input[name=minprice], .container .search_div input[name=maxprice]{
-    width:60px;
-}
-.container .search_div input[type=submit]{
-    border-style:none;
-    width:64px;
-    height:30px;
-    cursor: pointer;
-
-    color: #ffffff;
-    background-color: #f84f52;
-
-    margin-left: 40px;
-
-    text-align: center;
-    font-size: 16px;
+.container .sea_div p {
+    font-size: 36px;
     font-weight: bold;
+    color: #ffffff;
 }
 
-/* 商品展示部分 */
-.product_container{
+/* 书籍展示部分 */
+.wb_div {
     float: left;
 
-    width: 1000px;
-
-    margin-top: 20px;
+    width: 1200px;
+    margin: 0 100px;
 }
+.wb_div .wb_id p{
+    font-size: 16px;
+    font-weight: bold;
+    color: #940000;
+}
+
 /* 话题块 */
-.product_div{
+.library_div{
     /* float: left; */
 
     width:200px;
@@ -126,20 +78,20 @@ td {
 }
 
 /*
-.product_container .prod_div:nth-child(5),.product_container .prod_div:nth-child(10),
-.product_container .prod_div:nth-child(15),.product_container .prod_div:nth-child(20),
-.product_container .prod_div:nth-child(25),.product_container .prod_div:nth-child(30),
-.product_container .prod_div:nth-child(35),.product_container .prod_div:nth-child(40),
-.product_container .prod_div:nth-child(45),.product_container .prod_div:nth-child(50){
+.library_container .prod_div:nth-child(5),.library_container .prod_div:nth-child(10),
+.library_container .prod_div:nth-child(15),.library_container .prod_div:nth-child(20),
+.library_container .prod_div:nth-child(25),.library_container .prod_div:nth-child(30),
+.library_container .prod_div:nth-child(35),.library_container .prod_div:nth-child(40),
+.library_container .prod_div:nth-child(45),.library_container .prod_div:nth-child(50){
     margin-right:0;
 }
 */
 
-.product_container .product_div img{
+.library_container .library_div img{
     height: 200px;
     width: 200px;
 }
-.product_container #product_class_div{
+.library_container #library_class_div{
     width: 200px;
     height: 15px;
 
@@ -147,7 +99,7 @@ td {
     text-align: left;
     color: rgb(078, 157, 169);
 }
-.product_container #product_name_div{
+.library_container #library_name_div{
     width: 200px;
     height: 28px;
 
@@ -161,7 +113,7 @@ td {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.product_container #product_price_div{
+.library_container #library_price_div{
     width: 100px;
     height: 18px;
 
@@ -172,7 +124,7 @@ td {
 
     float: left;
 }
-.product_container #product_sold_div{
+.library_container #library_sold_div{
     width: 100px;
     height: 18px;
 
@@ -185,7 +137,7 @@ td {
 }
 
 /* 功能键: 加入购物车 */
-.product_container #gotocart_div{
+.library_container #gotocart_div{
     float:left;
 
     width:100px;
@@ -211,7 +163,7 @@ td {
 }
 
 /* 功能键: 收藏 */
-.product_container #collect_div{
+.library_container #collect_div{
     float:left;
 
     width:100px;
@@ -242,16 +194,16 @@ td {
 /* 电梯本体 */
 .elevator {
     position: fixed;
-    width: 80px;
+    width: 160px;
     height: auto;
 
     left: 50%;
     margin-left: 620px;
-    top: 280px;
+    top: 320px;
     z-index: 100;
     
     /* (已修改方案) */
-    /* 初始隐藏电梯，页面向下滑动时伴随 商品搜索条 出现 */
+    /* 初始隐藏电梯，页面向下滑动时伴随 书籍搜索条 出现 */
     /* opacity: 0; */
 
     text-align: center;
@@ -262,7 +214,7 @@ td {
 .elevator .elevator_list {
     /* position: relative; */
 
-    width: 80px;
+    width: 160px;
     height: auto;
 
     background: #fff;
@@ -272,7 +224,30 @@ td {
 
     box-shadow: 5px 5px 5px #bdbdbd;
 }
+/* 海 */
+.elevator .elevator_list li[class = 'sea'] {
+    width: auto;
+    height: 50px;
+    line-height: 50px;
 
+    border: 1px solid #dcdcdc;
+    margin: 0;
+
+    list-style-type: none;
+    background-color: #31384f;
+}
+
+.elevator .elevator_list li[class = 'sea'] a {
+    display: block;
+
+    width: auto;
+    height: 50px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+}
+/* 世界泡 */
 .elevator .elevator_list li {
     width: auto;
     height: 50px;

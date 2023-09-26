@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <title>AbyBlog-Library: Aby的胡思乱想...</title>
+    <link rel="shortcut icon" href="/image/img_bg/web_icon.png">
+    <link rel="stylesheet" type="text/css" href="/css/library.css">
+</head>
+
+<body>
+<!-- 顶部 -->
+<div class="top" th:insert="/top.html"></div>
+
+<!-- “图书馆”模块 -->
+<div class="library_container">
+
+    <!-- 海: 原始海/酸性海 -->
+    <div class="sea_div">
+        <div class="sea_id"><p>原始海/酸性海(Primitive Sea/Acidic Sea)</p></div>
+
+        <!-- 世界泡: 角色扮演游戏(RPG) -->
+        <div class="wb_div">
+            <div class="wb_id"><p>第一世界泡(World Bubble Ⅰ)——角色扮演游戏(RPG)</p></div>
+            <!-- 书籍展示块 -->
+            <div class="library_div" th:each="product:${productlist}">
+                <a th:href="'/store/productdetail?library_id='+${product.library_id}">
+                    <img style="height: 200px; width: 200px;" th:src="@{'/image/img_product/'+${product.picture}}" alt=""/>
+                </a>
+                <div id="library_class_div" th:utext="${product.library_class}" ><b>World ID</b></div>
+                <div id="library_name_div" th:utext="${product.library_name}" ><b>World Name</b></div>
+            </div>
+        </div>
+
+        <!-- 世界泡: 三部曲：节肢、植物、类人 -->
+        <div class="wb_div">
+            <div class="wb_id"><p>第二世界泡(World Bubble Ⅱ)——三部曲：节肢、植物、类人(Trilogy: Swarm, Plant, Humanoid)</p></div>
+            <!-- 书籍展示块 -->
+            <div class="library_div" th:each="product:${productlist}">
+                <a th:href="'/store/productdetail?library_id='+${product.library_id}">
+                    <img style="height: 200px; width: 200px;" th:src="@{'/image/img_product/'+${product.picture}}" alt=""/>
+                </a>
+                <div id="library_class_div" th:utext="${product.library_class}" ><b>World ID</b></div>
+                <div id="library_name_div" th:utext="${product.library_name}" ><b>World Name</b></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 海: 演化海/碱性海 -->
+    <div class="sea_div">
+        <div class="sea_id"><p>演化海/碱性海(Evolutionary Sea/Alkaline Sea)</p></div>
+
+        <!-- 世界泡 -->
+        <div class="wb_div">
+            <div class="wb_id"><p>第三世界泡(World Bubble Ⅲ)——蠹：三部曲(Moth: Trilogy)</p></div>
+            <!-- 书籍展示块 -->
+            <div class="library_div" th:each="product:${productlist}">
+                <a th:href="'/store/productdetail?library_id='+${product.library_id}">
+                    <img style="height: 200px; width: 200px;" th:src="@{'/image/img_product/'+${product.picture}}" alt=""/>
+                </a>
+                <div id="library_class_div" th:utext="${product.library_class}" ><b>World ID</b></div>
+                <div id="library_name_div" th:utext="${product.library_name}" ><b>World Name</b></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- 功能: 电梯 -->
+<div class="elevator">
+    <ul class="elevator_list">
+        <li class="sea"><a href="javascript:">Acidic Sea</a></li>
+        <li class="sea"><a href="javascript:">Alkaline Sea</a></li>
+
+        <li><a href="javascript:" data-name="wb3">World Bubble Ⅲ</a></li>
+        <li><a href="javascript:" data-name="wb4">World Bubble Ⅳ</a></li>
+        <li><a href="javascript:" data-name="wb5">World Bubble Ⅴ</a></li>
+        <li><a href="javascript:" data-name="wb6">World Bubble Ⅵ</a></li>
+        
+        <li><a href="javascript:" id="backTop">Top</a></li>
+    </ul>
+</div>
+
+<!-- 底部 -->
+<div class="bottom" th:insert="/bottom.html"></div>
+
+<script type="text/javascript" src="/js/public.js"></script>
+</body>
+</html>

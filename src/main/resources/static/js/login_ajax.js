@@ -1,8 +1,8 @@
 $(function() {
 
-	$("form").submit(function() {
-		var email = $("input[name='email']").val();
-		var password = $("input[name='password']").val();
+	$(".sign_div").submit(function() {
+		const email = $("input[name = 'email']").val();
+		const password = $("input[name = 'password']").val();
 
 		$.post("/index/doLogin", {
 			"email" : email,

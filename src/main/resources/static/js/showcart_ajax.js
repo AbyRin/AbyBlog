@@ -2,16 +2,16 @@ $(function(){
     sum();
     total();
     chk();
-    // week 13 添加
+    // 购物车功能: 跳转到订单页面
     $(".goto_order").click(function(){
-    //    alert("aaba");
-        var arr = [];//初始化一个数组arr，用于保存获得多选框的值。
+    // alert("aaba");
+        const arr = [];//初始化一个数组arr，用于保存获得多选框的值。
         $('input:checkbox:checked').each(function(){
             if($(this).attr("class") !== "allC"){
                 arr.push($(this).attr('value'));
             }
         });
-        var cartIds=arr.toString();
+        const cartIds=arr.toString();
         //使用Ajax进行跳转，并带参数
         $.post("/order/order",{"cartIds":cartIds},function(){
             window.location="/order/order?cartIds="+cartIds;
@@ -21,16 +21,16 @@ $(function(){
 
 function sum(){
     $('#goods tr').each(function(){
-        var price = parseFloat($(this).find("td:eq(4)").text());
-        var num	= parseInt($(this).find("input[name='num']").val());
+        const price = parseFloat($(this).find("td:eq(4)").text());
+        const num	= parseInt($(this).find("input[name='num']").val());
         $(this).find("td:eq(6)").text(price * num);
     })
 }
 function total(){
-    var s=0;
+    const s=0;
     $('#goods tr').each(function(){
         if($(this).find("input[type='checkbox']").attr('checked')){
-            var prices = parseFloat($(this).find("td:eq(6)").text());
+            const prices = parseFloat($(this).find("td:eq(6)").text());
             s+=prices;
         }
     })
@@ -38,8 +38,8 @@ function total(){
 }
 
 function change(btn, n,cartId) {
-    var t = $(btn).next().length===0? $(btn).prev() : $(btn).next();
-    var num = parseInt(t.val());
+    const t = $(btn).next().length===0? $(btn).prev() : $(btn).next();
+    const num = parseInt(t.val());
     if(num<=1 && n<0) {
         return;
     }
@@ -47,8 +47,8 @@ function change(btn, n,cartId) {
     t.val(num+n);
     num = t.val();
 
-    var tds=$(btn).parent().siblings();
-    var yourprice = tds.eq(4).text();
+    const tds=$(btn).parent().siblings();
+    const yourprice = tds.eq(4).text();
     tds.eq(5).text(yourprice * num);
     total();
     $.post("/cart/updateCart",{"cartId":cartId,"num":num});
