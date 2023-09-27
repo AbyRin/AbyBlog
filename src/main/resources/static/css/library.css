@@ -26,37 +26,50 @@ td {
     align-items: Center;
 
     margin-top: 140px;
-    width: 1400px;
+    width: 1200px;
 
-    background-color: #31384f;
-    border-radius: 20px;
-    box-shadow: 2px 2px 2px #bdbdbd;
+    background-color: #dddddd;
 }
-.container .sea_div {
-    width: 1400px;
-    height: 40px;
+.library_container .sea_div {
+    width: 1200px;
+    height: auto;
 
     background-color: #eeeeee;
+    border-radius:  20px;
+    box-shadow: 2px 2px 2px #bdbdbd;
+
+    margin-top: 30px;
+}
+.library_container .sea_id {
+    width: 1200px;
+    height: 48px;
+
+    background-color: #31384f;
     border-radius:  20px 20px 0 0;
     box-shadow: 2px 2px 2px #bdbdbd;
 }
-.container .sea_div p {
-    font-size: 36px;
+.library_container .sea_div .sea_id p {
+    font-size: 32px;
     font-weight: bold;
     color: #ffffff;
+
+    text-align: center;
+    line-height: 48px;
+
+    margin: 0;
 }
 
 /* 书籍展示部分 */
 .wb_div {
     float: left;
 
-    width: 1200px;
-    margin: 0 100px;
+    width: 1100px;
+    margin: 0 50px;
 }
 .wb_div .wb_id p{
     font-size: 16px;
     font-weight: bold;
-    color: #940000;
+    color: #000000;
 }
 
 /* 话题块 */
@@ -94,46 +107,54 @@ td {
 .library_container #library_class_div{
     width: 200px;
     height: 15px;
-
+}
+.library_container #library_class_div a{
     font-size:15px;
     text-align: left;
     color: rgb(078, 157, 169);
 }
+
+/*  */
 .library_container #library_name_div{
+    width: 200px;
+    height: 15px;
+
+    margin-top: 5px;
+}
+.library_container #library_name_div a{
+    font-size:15px;
+    text-align: left;
+    color: rgb(078, 157, 169);
+}
+
+/*  */
+.library_container #library_price_div{
     width: 200px;
     height: 28px;
 
-    margin-top: 5px;
-
-    font-size:20px;
-    text-align: left;
-    color: #31384f;
-
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.library_container #library_price_div{
-    width: 100px;
-    height: 18px;
-
-    font-size:18px;
-    margin-top:10px;
-    text-align: left;
-    color: #f84f52;
+    margin-top: 4px;
 
     float: left;
 }
+.library_container #library_price_div a{
+    font-size:20px;
+    margin-top:10px;
+    text-align: left;
+    color: #31384f;
+}
+
+/*  */
 .library_container #library_sold_div{
-    width: 100px;
+    width: 200px;
     height: 18px;
 
+    float: left;
+}
+.library_container #library_sold_div a{
     font-size:18px;
     margin-top:10px;
     text-align: right;
-    color: #fec738;
-
-    float: right;
+    color: #f84f52;
 }
 
 /* 功能键: 加入购物车 */
