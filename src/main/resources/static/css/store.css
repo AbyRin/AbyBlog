@@ -204,6 +204,7 @@ td {
 
     color:#666666;
     text-decoration: none;
+    transition: color .2s;
 }
 #gotocart_div a:hover{
     background-color: #f84f52;
@@ -231,6 +232,7 @@ td {
 
     color:#666666;
     text-decoration: none;
+    transition: color .2s;
 }
 #collect_div a:hover{
     background-color: #f84f52;
