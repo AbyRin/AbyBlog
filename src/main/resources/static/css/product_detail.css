@@ -66,6 +66,7 @@ a, p {
 
     width: 500px;
     height: 500px;
+    position: relative;  /* 相对定位-必要: 为 功能-商品放大镜 服务 */
 
     background-color: #ffffff;
     border-radius: 10px;
@@ -75,6 +76,37 @@ a, p {
     width: 500px;
     border-radius: 10px;
 }
+.picture_div .layer {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    cursor: move;
+    display: none;
+}
+/* 商品细节div */
+.picture_detail {
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+    position: absolute;
+    left: 800px;
+    top: 168px;
+    z-index: 999;
+
+    background-color: #fff;
+    background-image: url("'/image/img_product/'+${product.picture}");
+    background-size: 1250px 1250px;
+
+    display: none;
+  }
 
 /* 商品信息div */
 .information_div{
