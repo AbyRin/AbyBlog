@@ -293,6 +293,7 @@ td {
     text-decoration: none;
 
     color: #31384f;
+    transition: all .5s;
 }
 
 .elevator .elevator_list li a:hover,

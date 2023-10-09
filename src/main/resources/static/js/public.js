@@ -57,7 +57,7 @@
             document.documentElement.scrollTop = top
         }
     })
-})
+})();
 
 
 // 功能四: 滑动页面 跳转到 对应分类 (与功能三相对)
@@ -86,4 +86,4 @@ window.addEventListener('scroll', function () {
     } else if (n >= class_4.offsetTop) {
         document.querySelector('[data-name = class_4]').classList.add('active')
     }
-})
+})();

@@ -153,15 +153,21 @@
                 clearTimeout(timeId)  // 鼠标移入，先清除定时器
                 pic_detail.style.display = 'block';
             }
+            // 商品细节-消失函数（延迟版）
+            // function hide () {
+            //     timeId = setTimeout(function () {  // 鼠标离开，开启定时器
+            //     pic_detail.style.display = 'none';
+            //     }, 100)
+            // }
+            // 商品细节-消失函数（无延迟版）
             function hide () {
-                timeId = setTimeout(function () {  // 鼠标离开，开启定时器
                 pic_detail.style.display = 'none';
-                }, 200)
             }
             
+            // 体验不好，暂时隐藏！
             // 鼠标经过 商品细节-盒子 也会显示和隐藏，直接调用show, hide函数
-            pic_detail.addEventListener('mouseenter', show)
-            pic_detail.addEventListener('mouseleave', hide)
+            // pic_detail.addEventListener('mouseenter', show)
+            // pic_detail.addEventListener('mouseleave', hide)
 
 
             // (2)遮罩部分————————————————————————————————————
