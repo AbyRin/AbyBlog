@@ -57,7 +57,7 @@ p {
     width: 1160px;
     height: 100%;
 
-    margin: 40px 20px 0 20px;
+    margin: 8px 20px 0 20px;
 
     background-color: white;
 
@@ -66,6 +66,17 @@ p {
 .introduce_box table {
     table-layout: fixed;
     width: 1160px;
+
+    /* tr 间距 */
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+.introduce_box table tr{
+    border-radius: 20px;
+    box-shadow:
+        inset -2px -2px 4px rgba(255, 255, 255, .9),
+        inset 2px 2px 4px rgba(0, 0, 0, .4);
+    margin-block: 10px;
 }
 .introduce_box tr td .content_div {
     margin-left: 20px;
@@ -75,6 +86,7 @@ p {
     font-family: frutiger sans-serif;
     font-size: 24px;
     font-weight: bold;
+    text-indent: 18px;
     color: #bd0707;
 
     width: 1200px;

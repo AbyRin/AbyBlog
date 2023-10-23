@@ -1,0 +1,120 @@
+* {
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    background: #dddddd;
+}
+
+p {
+    margin-block: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: Center;
+
+    margin-top: 148px;
+
+    background-color: #eeeeee;
+    box-shadow: 2px 2px 2px #bdbdbd;
+}
+
+/* 下拉框 —————————————————————————————————————————————————— */
+/* .dropdown_div {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+
+    width: 1200px;
+    height: 40px;
+
+    float: left;
+
+    color: #ffffff;
+    font-weight: bold;
+
+    background-color: #31384f;
+
+    line-height: 40px;
+}
+.dropdown {
+    float: left;
+    
+    width: 160px;
+    height: 40px;
+    text-align: center;
+}
+.dropdown-content {
+    display: none;
+    text-align: left;
+    z-index: 1;
+
+    width: 320px;
+
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content p {
+    text-indent: 1rem;
+    
+    color: #31384f;
+    transition: all .2s;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown .dropdown-content p:hover {
+    background-color: #f84f52;
+    color: #eeeeee;
+} */
+
+/* 图瀑布 —————————————————————————————————————————————————— */
+.picture_fall{
+    float: left;
+
+    width: 1000px;
+
+    margin-top: 20px;
+}
+/* 瀑布列 */
+.each_fall{
+    flex:0 0 30%;
+}
+/* 图块 */
+.picture_div{
+    margin-top:15px;
+    margin-left:20px;
+    margin-bottom: 40px;
+
+    padding: 10px;
+
+    display: inline-block;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px #bdbdbd;
+}
+
+/* .picture_div img{
+
+} */
+
+#picture_function_div{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    text-align: center;
+    color: #555555;
+
+    float: right;
+}

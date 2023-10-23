@@ -1,15 +1,10 @@
 * {
     scroll-behavior: smooth;
+    margin: 0;
 }
 body{
-    /*
-    background-size: cover;
-    background: url("../image/background/bg_black hole.jpg") no-repeat fixed;
-    */
     display: flex;
     flex-direction: column;
-
-
 
     height: 100%;
     background: #dddddd;
@@ -25,7 +20,7 @@ td {
     justify-content: center;
     align-items: Center;
 
-    margin-top: 140px;
+    margin-top: 148px;
     width: 1200px;
 
     background-color: #dddddd;

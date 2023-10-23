@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <title>Slidebar for Inspiration page</title>
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <!-- 搜索框 -->
+            <div class="sidebar_cell">
+                <img src="/image/icon/icons8-search-100.png" alt="">
+                <input type="text" placeholder="Search">
+            </div>
+            <!-- 目录 -->
+            <div class="sidebar_cell">
+                <a>设计</a>
+            </div>
+
+            <div class="sidebar_cell">
+                <a>文化</a>
+            </div>
+
+            <div class="sidebar_cell">
+                <a>工艺</a>
+            </div>
+
+            <div class="sidebar_cell">
+                <a>生活</a>
+            </div>
+
+            <div class="sidebar_cell">
+                <a>时代</a>
+            </div>
+
+            <div class="sidebar_cell">
+                <a>专题</a>
+            </div>
+        </ul>
+    </div>
+
+    <!-- js -->
+    <script>
+        const sidebar = document.querySelector('.sidebar')
+
+        sidebar.addEventListener('mouseover', function () {
+            sidebar.classList.add('long')
+        })
+        sidebar.addEventListener('mouseleave', function () {
+            sidebar.classList.remove('long')
+        })
+    </script>
+</body>
+
+</html>

@@ -133,27 +133,43 @@ p, a, span {
 .page_div {
     float: left;
 
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+
     background-color: #ffffff;
+    box-shadow: 5px 5px 5px #ababab;
 
     width: 1400px;
     height: 40px;
+    border-radius: 20px;
 
     align-content: center;
 
     margin-top: 120px;
 }
 .page_div_2{
-    align-content: center;
     text-align: center;
 
-    width: 1000px;
+    width: auto;
     height: 40px;
 
-    border-bottom: #31384f solid 2px;
-    margin-left: 200px;
+    border-radius: 20px;
+
+    padding: 0 20px;
+    margin: 10px;
+}
+.page_div_2:hover{
+    box-shadow:
+        inset -2px -2px 4px rgba(255, 255, 255, .9),
+        inset 2px 2px 4px rgba(0, 0, 0, .4);
+        transition: all .3s ease-in-out;
 }
 
 .page_div_2 a {
+    height: 40px;
+    
     color: #160A0A;
 
     font-weight:bold;
@@ -165,6 +181,7 @@ p, a, span {
 }
 
 .page_div_2 span {
+    height: 40px;
     color: #31384f;
 
     font-weight:bold;

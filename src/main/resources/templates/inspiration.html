@@ -2,112 +2,72 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <title>AbyBlog-Store: 不看一眼Aby的工艺品吗？不买也可以哦！</title>
+    <title>AbyBlog-Inspiration</title>
     <link rel="shortcut icon" href="/image/img_bg/web_icon.png">
-    <link rel="stylesheet" type="text/css" href="/css/store.css">
+    <link rel="stylesheet" type="text/css" href="/css/inspiration.css">
 </head>
 
 <body>
     <!-- 顶部 -->
     <div class="top" th:insert="/top.html"></div>
 
+    <!-- 侧边栏 -->
+    <div th:insert="/sidebar.html"></div>
+
     <!-- 网页主要内容 -->
     <div class="container">
-        <!-- 商品搜索条部分 -->
-        <div class="search_div">
-            <form method="post" action="">
 
-                <!-- 按商品名搜索 -->
-                <span class="input_span">Name
-                    <input type="text" name="product_name" />
-                </span>
+        <!-- 下拉框：已废用，改用侧边栏 -->
+        <!-- <div class="dropdown_div"> -->
+            <!-- 单个下拉框 -->
+            <!-- <div class="dropdown">
+                <span>设计</span>
+                <div class="dropdown-content">
+                    <p>概念 / Concept</p>
+                    <p>平面 / Graphic</p>
+                    <p>UI / 人机交互</p>
+                    <p>壁纸 / Wallpaper</p>
+                </div>
+            </div>
+        </div> -->
 
-                <!-- 按商品分类搜索 -->
-                <span class="input_span">Class
-                    <select name="product_class" class="product_class">
-                        <option value="">All</option>
-                        <option th:each="product_class:${product_classes}" th:value="${product_class}" th:text="${product_class}"></option>
-                    </select>
-                </span>
+        <!-- 临时内容 -->
+        <div style="height: 1000px; width: 1200px; background-color: rgb(151, 151, 151);"></div>
 
-                <!-- 按价格区间搜索 -->
-                <span class="input_span">Price Range
-                    <input type="text" name="minprice"/> ~ <input type="text" name="maxprice" />
-                </span>
 
-                <input type="submit" value="Search">
-            </form>
-        </div>
-
-        <!-- 商品部分 -->
-        <div class="product_container">
-
-            <!-- 商品展示块 -->
-            <div class="product_div" th:each="product:${productlist}">
-                <a th:href="'/store/productdetail?product_id='+${product.product_id}">
-                    <img style="height: 200px; width: 200px;" th:src="@{'/image/img_product/'+${product.picture}}" alt=""/>
-                </a>
-                <div id="product_class_div" th:utext="${product.product_class}" ><b>Product Class</b></div>
-                <div id="product_name_div" th:utext="${product.product_name}" ><b>Product Name</b></div>
-                <div id="product_price_div" th:utext="${product.price}+'CNY'" ><b>Price</b></div>
-                <div id="product_sold_div" th:utext="'Sold '+${product.soldnum}">Sold Num</div>
-                <div>
-                    <!-- 加入购物车功能-->
-                    <div id="gotocart_div">
-                        <a th:href="'/cart/addcart?product_id='+${product.product_id}"><b>Purchase</b></a>
-                    </div>
-
-                    <!-- 收藏功能 -->
-                    <div id="collect_div">
-                        <a th:href="'/collect/addcollect?product_id='+${product.product_id}"><b>Collect</b></a>
-                    </div>
+        <!-- 图瀑布 -->
+        <div class="picture_fall">
+            <!-- 瀑布列 -->
+            <div class="each_fall">
+                <!-- 图块 -->
+                <div class="picture_div" th:each="picture:${picturelist}">
+                    <a th:href="'/store/picturedetail?picture_id='+${picture.picture_id}">
+                        <img th:src="@{'/image/img_picture/'+${picture.picture}}" alt=""/>
+                    </a>
+                    <div id="picture_function_div" th:utext="${picture.picture_class}" ><b>Like</b></div>
+                    <div id="picture_collect_div" th:utext="${picture.picture_name}" ><b>Collect</b></div>
+                    <div id="picture_download_div" th:utext="${picture.price}+'CNY'" ><b>Download</b></div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- 功能: 电梯 -->
-    <div class="elevator">
+    <!-- <div class="elevator">
         <ul class="elevator_list">
-            <li><a href="javascript:" data-name="class_1">Class-1</a></li>
-            <li><a href="javascript:" data-name="class_2">Class-2</a></li>
-            <li><a href="javascript:" data-name="class_3">Class-3</a></li>
-            <li><a href="javascript:" data-name="class_4">Class-4</a></li>
+            <li class="sea"><a href="javascript:">Acidic Sea</a></li>
+            <li class="sea"><a href="javascript:">Alkaline Sea</a></li>
+
+            <li><a href="javascript:" data-name="wb3">World Bubble Ⅲ</a></li>
+            <li><a href="javascript:" data-name="wb4">World Bubble Ⅳ</a></li>
+            <li><a href="javascript:" data-name="wb5">World Bubble Ⅴ</a></li>
+            <li><a href="javascript:" data-name="wb6">World Bubble Ⅵ</a></li>
+            
             <li><a href="javascript:" id="backTop">Top</a></li>
         </ul>
-    </div>
+    </div> -->
 
     <!-- 底部 -->
     <div class="bottom" th:insert="/bottom.html"></div>
-
-    <!-- js -->
-    <script type="text/javascript" src="/js/public.js"></script>
-
-    <!-- 测试用 -->
-    <!-- <script>
-        console.log(document.querySelector('.class_1'))
-        
-        const ele = document.querySelector('.elevator_list li a')
-        console.log(ele.dataset.name)
-
-        const ele_2 = document.querySelector('.elevator_list a[data-name = "class_2"]')
-        console.log(ele_2.dataset.name)
-
-    </script> -->
-
-    <!-- <script>
-        const search = document.querySelector('.search_div')
-        const n = document.documentElement.scrollTop 
-        console.log(search.style)
-
-        获取html滚动像素
-        console.log('html滚动像素为' + document.documentElement.scrollTop)
-
-        console.log(search.offsetTop)
-    </script> -->
-    <!-- <script>
-        const a = document.querySelector('#backTop')
-        console.log(a)
-    </script> -->
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <title>AbyBlog-Store: 小商店</title>
+    <title>AbyBlog-Store</title>
     <link rel="shortcut icon" href="/image/img_bg/web_icon.png">
     <link rel="stylesheet" type="text/css" href="/css/store.css">
 </head>
@@ -45,7 +45,7 @@
             <!-- 商品展示块 -->
             <div class="product_div" th:each="product:${productlist}">
                 <a th:href="'/store/productdetail?product_id='+${product.product_id}">
-                    <img style="height: 200px; width: 200px;" th:src="@{'/image/img_product/'+${product.picture}}" alt=""/>
+                    <img th:src="@{'/image/img_product/'+${product.picture}}" alt=""/>
                 </a>
                 <div id="product_class_div" th:utext="${product.product_class}" ><b>Product Class</b></div>
                 <div id="product_name_div" th:utext="${product.product_name}" ><b>Product Name</b></div>
@@ -69,10 +69,14 @@
     <!-- 功能: 电梯 -->
     <div class="elevator">
         <ul class="elevator_list">
-            <li><a href="javascript:" data-name="class_1">Class-1</a></li>
-            <li><a href="javascript:" data-name="class_2">Class-2</a></li>
-            <li><a href="javascript:" data-name="class_3">Class-3</a></li>
-            <li><a href="javascript:" data-name="class_4">Class-4</a></li>
+            <li class="sea"><a href="javascript:">Acidic Sea</a></li>
+            <li class="sea"><a href="javascript:">Alkaline Sea</a></li>
+
+            <li><a href="javascript:" data-name="wb3">World Bubble Ⅲ</a></li>
+            <li><a href="javascript:" data-name="wb4">World Bubble Ⅳ</a></li>
+            <li><a href="javascript:" data-name="wb5">World Bubble Ⅴ</a></li>
+            <li><a href="javascript:" data-name="wb6">World Bubble Ⅵ</a></li>
+            
             <li><a href="javascript:" id="backTop">Top</a></li>
         </ul>
     </div>

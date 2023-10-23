@@ -1,5 +1,6 @@
 * {
     scroll-behavior: smooth;
+    margin: 0;
 }
 body{
     /*
@@ -8,8 +9,6 @@ body{
     */
     display: flex;
     flex-direction: column;
-
-
 
     height: 100%;
     background: #dddddd;
@@ -25,7 +24,7 @@ td {
     justify-content: center;
     align-items: Center;
 
-    margin-top: 140px;
+    margin-top: 148px;
 
     background-color: #eeeeee;
     box-shadow: 2px 2px 2px #bdbdbd;
@@ -107,7 +106,7 @@ td {
 
     margin-top: 20px;
 }
-/* 话题块 */
+/* 商品展示块 */
 .product_div{
     /* float: left; */
 
@@ -244,16 +243,16 @@ td {
 /* 电梯本体 */
 .elevator {
     position: fixed;
-    width: 80px;
+    width: 160px;
     height: auto;
 
     left: 50%;
     margin-left: 620px;
-    top: 280px;
+    top: 320px;
     z-index: 100;
     
     /* (已修改方案) */
-    /* 初始隐藏电梯，页面向下滑动时伴随 商品搜索条 出现 */
+    /* 初始隐藏电梯，页面向下滑动时伴随 书籍搜索条 出现 */
     /* opacity: 0; */
 
     text-align: center;
@@ -264,7 +263,7 @@ td {
 .elevator .elevator_list {
     /* position: relative; */
 
-    width: 80px;
+    width: 160px;
     height: auto;
 
     background: #fff;
@@ -274,7 +273,30 @@ td {
 
     box-shadow: 5px 5px 5px #bdbdbd;
 }
+/* 海 */
+.elevator .elevator_list li[class = 'sea'] {
+    width: auto;
+    height: 50px;
+    line-height: 50px;
 
+    border: 1px solid #dcdcdc;
+    margin: 0;
+
+    list-style-type: none;
+    background-color: #31384f;
+}
+
+.elevator .elevator_list li[class = 'sea'] a {
+    display: block;
+
+    width: auto;
+    height: 50px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+}
+/* 世界泡 */
 .elevator .elevator_list li {
     width: auto;
     height: 50px;
@@ -295,6 +317,7 @@ td {
     text-decoration: none;
 
     color: #31384f;
+    transition: all .5s;
 }
 
 .elevator .elevator_list li a:hover,
