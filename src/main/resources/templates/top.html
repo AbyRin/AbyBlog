@@ -6,82 +6,82 @@
 </head>
 
 <body>
-<div class="top_container">
-    <div class="top_div">
-        <!-- 图标 -->
-        <div class="icon_div">
-            <img src="/image/img_bg/aby_icon.png" alt="">
-        </div>
-
-        <div class="left_div">
-            <!-- 欢迎语 -->
-            <div class="welcome_div">
-                <a th:if="${session.member}">
-                    <span th:text="${session.member.getEmail()}+'Welcome to AbyBlog!'"></span>
-                </a>
-                <a th:unless="${session.member}">Welcome to AbyBlog!</a>
+    <div class="top_container">
+        <div class="top_div">
+            <!-- 图标 -->
+            <div class="icon_div">
+                <img src="/image/img_bg/aby_icon.png" alt="">
             </div>
 
-            <!-- 登入登出 -->
-            <div class="account_div">
-                <div>
+            <div class="left_div">
+                <!-- 欢迎语 -->
+                <div class="welcome_div">
                     <a th:if="${session.member}">
-                        <a href="/index/toLogout">Sign Out</a>
-                        <!-- <a href="/index/toRegister">Sign Up</a> -->
-                        <a href="/admin/toAdminLogin">Sign In as Admin</a>
+                        <span th:text="${session.member.getEmail()}+'Welcome to AbyBlog!'"></span>
                     </a>
-                    <a th:unless="${session.member}">
-                        <a href="/index/toLogin">Sign In</a>
-                        <!-- <a href="/index/toRegister">Sign Up</a> -->
-                        <a href="/admin/toAdminLogin">Sign In as Admin</a>
-                    </a>
+                    <a th:unless="${session.member}">Welcome to AbyBlog!</a>
+                </div>
+
+                <!-- 登入登出 -->
+                <div class="account_div">
+                    <div>
+                        <a th:if="${session.member}">
+                            <a href="/index/toLogout">Sign Out</a>
+                            <!-- <a href="/index/toRegister">Sign Up</a> -->
+                            <a href="/admin/toAdminLogin">Sign In as Admin</a>
+                        </a>
+                        <a th:unless="${session.member}">
+                            <a href="/index/toLogin">Sign In</a>
+                            <!-- <a href="/index/toRegister">Sign Up</a> -->
+                            <a href="/admin/toAdminLogin">Sign In as Admin</a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 功能键 -->
+            <div class="function_div">
+                <div class="each_function">
+                    <img src="/image/icon/icons8-account-30.png" alt="">
+                    <a href="/account" style="text-decoration:none;">Account</a>
+                </div>
+                <div class="each_function">
+                    <img src="/image/icon/icons8-order-48.png" alt="">
+                    <a href="/order/showorder" style="text-decoration:none;">Order</a>
+                </div>
+                <div class="each_function">
+                    <img src="/image/icon/icons8-cart-30.png" alt="">
+                    <a href="/cart/showcart" style="text-decoration:none;">Cart</a>
+                </div>
+                <div class="each_function">
+                    <img src="/image/icon/icons8-star-30.png" alt="">
+                    <a href="/collect/showcollect" style="text-decoration:none;">Collection</a>
+                </div>
+            </div>
+
+            <!-- 分页栏 -->
+            <div class="page_div">
+                <div class="each_page">
+                    <a href="/index">Index</a>
+                </div>
+                <div class="each_page">
+                    <a href="/library">Library</a>
+                </div>
+                <div class="each_page">
+                    <a href="/store">Store</a>
+                </div>
+                <div class="each_page">
+                    <a href="/comment">Comment</a>
+                </div>
+                <div class="each_page">
+                    <a href="/inspiration">Inspiration</a>
+                </div>
+                <div class="each_page">
+                    <a href="/about">About Aby</a>
                 </div>
             </div>
         </div>
-
-        <!-- 功能键 -->
-        <div class="function_div">
-            <div class="each_function">
-                <img src="/image/icon/icons8-account-30.png" alt="">
-                <a href="/user" style="text-decoration:none;">Account</a>
-            </div>
-            <div class="each_function">
-                <img src="/image/icon/icons8-order-48.png" alt="">
-                <a href="/order/showorder" style="text-decoration:none;">Order</a>
-            </div>
-            <div class="each_function">
-                <img src="/image/icon/icons8-cart-30.png" alt="">
-                <a href="/cart/showcart" style="text-decoration:none;">Cart</a>
-            </div>
-            <div class="each_function">
-                <img src="/image/icon/icons8-star-30.png" alt="">
-                <a href="/collect/showcollect" style="text-decoration:none;">Collection</a>
-            </div>
-        </div>
-
-        <!-- 分页栏 -->
-        <div class="page_div">
-            <div class="each_page">
-                <a href="/index">Index</a>
-            </div>
-            <div class="each_page">
-                <a href="/library">Library</a>
-            </div>
-            <div class="each_page">
-                <a href="/store">Store</a>
-            </div>
-            <div class="each_page">
-                <a href="/comment">Comment</a>
-            </div>
-            <div class="each_page">
-                <a href="/inspiration">Inspiration</a>
-            </div>
-            <div class="each_page">
-                <a href="/about">About Aby</a>
-            </div>
-        </div>
     </div>
-</div>
 
 </body>
 </html>

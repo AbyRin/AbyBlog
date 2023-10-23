@@ -28,30 +28,21 @@
 
 // 功能三: 点击分类 跳转到 对应页面 (与功能四相对)
 (function () {
-    // 获取对象
     const list = document.querySelector('.elevator_list')
 
-    // 绑定点击事件
     list.addEventListener('click', function (e) {
-        // 判断: 点击a标签 且 标签含有自定义类名name > 真
-        // Tip: target事件 - 返回触发事件的元素
         if (e.target.tagName === 'A' && e.target.dataset.name) {
 
-            // 先移除已有的 avtive类 
-            // 尝试获取已有 active类 的对象 ...
+            // 排他
             const old = document.querySelector('.elevator_list .active')
-            // ... 如果已有, 就移除类
             if (old) {old.classList.remove('active')}
-
-            // 当前元素添加 active 
             e.target.classList.add('active')
 
             // 获得自定义属性  new   topic 
             // console.log(e.target.dataset.name)
             // 根据小盒子的自定义属性值 去选择 对应的大盒子
 
-            // 获得对应 分类区 的 offsetTop
-            // Bug存疑
+            // Bug，等待修复
             const top = document.querySelector(`.${e.target.dataset.name}`).offsetTop
             // 让页面滚动到对应的位置
             document.documentElement.scrollTop = top
@@ -62,21 +53,19 @@
 
 // 功能四: 滑动页面 跳转到 对应分类 (与功能三相对)
 window.addEventListener('scroll', function () {
-    // 1. 先移除已有的 avtive类 
-    // 尝试获取已有 active类 的对象 ...
+    // 排他
     const old = document.querySelector('.elevator_list .active')
-    // ... 如果已有, 就移除类
     if (old) {old.classList.remove('active')}
 
-    // 2. 判断页面当前滑动的位置, 选择小盒子
-    // 获取分类class 和 页面滑动像素n
+    // 判断页面当前滑动的位置, 选择小盒子
+    // 获取分类 class 和 页面滑动像素 n
     const class_1 = document.querySelector('.elevator_list li a[data-name = "class_1"]').dataset.name
     const class_2 = document.querySelector('.elevator_list li a[data-name = "class_2"]').dataset.name
     const class_3 = document.querySelector('.elevator_list li a[data-name = "class_3"]').dataset.name
     const class_4 = document.querySelector('.elevator_list li a[data-name = "class_4"]').dataset.name
     const n = document.documentElement.scrollTop
 
-    // 3. 匹配
+    // 匹配
     if (n >= class_1.offsetTop && n < class_2.offsetTop) {
         document.querySelector('[data-name = class_1]').classList.add('active')
     } else if (n >= class_2.offsetTop && n < class_3.offsetTop) {
@@ -86,4 +75,4 @@ window.addEventListener('scroll', function () {
     } else if (n >= class_4.offsetTop) {
         document.querySelector('[data-name = class_4]').classList.add('active')
     }
-})();
+});

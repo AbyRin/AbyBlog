@@ -8,121 +8,122 @@
     <script type="text/javascript" src="/js/comment.js"></script>
 </head>
 <body>
-<!-- 顶部 -->
-<div class="top" th:insert="/top.html"></div>
-<div class="container">
-    <!-- 功能模块: 话题搜索条 -->
-    <div class="search_div">
-        <form method="post" action="" style="width: 1000px;">
-            <span class="input_span">Name
-                <input type="text" name="productname" />
-            </span>
+    <!-- 顶部 -->
+    <div class="top" th:insert="/top.html"></div>
+    <div class="container">
+        <!-- 功能模块: 话题搜索条 -->
+        <div class="search_div">
+            <form method="post" action="" style="width: 1000px;">
+                <span class="input_span">Name
+                    <input type="text" name="productname" />
+                </span>
 
-            <span class="input_span">Order
-                <select name="productclass" class="product_class">
-                    <option value="">All</option>
-                    <option th:each="productclass:${productclasses}" th:value="${productclass}" th:text="${productclass}"></option>
-                </select>
-            </span>
+                <span class="input_span">Order
+                    <select name="productclass" class="product_class">
+                        <option value="">All</option>
+                        <option th:each="productclass:${productclasses}" th:value="${productclass}" th:text="${productclass}"></option>
+                    </select>
+                </span>
 
-            <span class="input_span">Time
-                <input type="text" name="minprice"/> ~ <input type="text" name="maxprice" />
-            </span>
-            <i class="icon-search"></i>
-            <input type="submit" value="Search">
+                <span class="input_span">Time
+                    <input type="text" name="minprice"/> ~ <input type="text" name="maxprice" />
+                </span>
+                <i class="icon-search"></i>
+                <input type="submit" value="Search">
 
-            <!-- 话题分类开关 -->
-            <!-- <label class="switch switch--on"> -->
-                <!-- <input type="checkbox" class="switch__input" /> -->
+                <!-- 话题分类开关 -->
+                <!-- <label class="switch switch--on"> -->
+                    <!-- <input type="checkbox" class="switch__input" /> -->
 
-                <!-- Circle -->
-                <!-- <div class="switch__circle"></div> -->
-            <!-- </label> -->
+                    <!-- Circle -->
+                    <!-- <div class="switch__circle"></div> -->
+                <!-- </label> -->
 
-            <!-- <label class="switch switch--off"> -->
-                <!-- <input type="checkbox" class="switch__input" /> -->
+                <!-- <label class="switch switch--off"> -->
+                    <!-- <input type="checkbox" class="switch__input" /> -->
 
-                <!-- Circle -->
-                <!-- <div class="switch__circle"></div> -->
-            <!-- </label> -->
+                    <!-- Circle -->
+                    <!-- <div class="switch__circle"></div> -->
+                <!-- </label> -->
 
-        </form>
-    </div>
-
-    <!-- 功能模块: 话题展示 -->
-    <div class="comment_container">
-
-        <!-- 话题块 -->
-        <div class="comment_div">
-
-            <!-- 左边区: 头像、关注功能 -->
-            <div class="comment_left">
-                <!-- 头像 -->
-                <div class="user_photo">
-                    <img src="/image/img_bg/Asuka.jpg" alt="">
-                </div>
-
-                <div class="user_name">
-                    <p class="user_name">Aby_VoV</p>
-                </div>
-
-                <!-- 关注功能-->
-                <div class="comment_follow">
-                    <a><b>Follow</b></a>
-                </div>
-            </div>
-
-            <!-- 右边区: 话题框、点赞、收藏、回复 -->
-            <div class="comment_right">
-
-                <!-- 话题框 -->
-                <div class="comment_content"></div>
-
-                <div class="comment_function_div">
-                    <!-- 点赞功能 -->
-                    <div class="function_button">
-                        <img src="/image/icon/icons8-heart-50.png" alt="">
-                        <a>Like</a>
-                    </div>
-
-                    <!-- 收藏功能 -->
-                    <div class="function_button">
-                        <img src="/image/icon/icons8-bookmark-50.png" alt="">
-                        <a>Collect</a>
-                    </div>
-
-                    <!-- 回复功能 -->
-                    <div class="function_button">
-                        <img src="/image/icon/icons8-comment-50.png" alt="">
-                        <a>Reply</a>
-                    </div>
-                </div>
-            </div>
-
+            </form>
         </div>
-    </div>
 
-    <!-- 功能模块: 发帖 -->
-    <div class="wrapper">
-        <i class="avatar"></i>
-        <textarea name="" id="tx" placeholder="唠几句？" rows="2" maxlength="200"></textarea>
-        <button>发布</button>
-    </div>
-    <div class="wrapper">
-        <span class="total">0/200字</span>
-    </div>
+        <!-- 功能模块: 话题展示 -->
+        <div class="comment_container">
 
-    <div class="list">
-        <div class="item" style="display: none;">
+            <!-- 话题块 -->
+            <div class="comment_div">
+
+                <!-- 左边区: 头像、关注功能 -->
+                <div class="comment_left">
+                    <!-- 头像 -->
+                    <div class="user_photo">
+                        <img src="/image/img_bg/Asuka.jpg" alt="">
+                    </div>
+
+                    <div class="user_name">
+                        <p class="user_name">Aby_VoV</p>
+                    </div>
+
+                    <!-- 关注功能-->
+                    <div class="comment_follow">
+                        <a><b>Follow</b></a>
+                    </div>
+                </div>
+
+                <!-- 右边区: 话题框、点赞、收藏、回复 -->
+                <div class="comment_right">
+
+                    <!-- 话题框 -->
+                    <div class="comment_content"></div>
+
+                    <div class="comment_function_div">
+                        <!-- 点赞功能 -->
+                        <div class="function_button">
+                            <img src="/image/icon/icons8-heart-50.png" alt="">
+                            <a>Like</a>
+                        </div>
+
+                        <!-- 收藏功能 -->
+                        <div class="function_button">
+                            <img src="/image/icon/icons8-bookmark-50.png" alt="">
+                            <a>Collect</a>
+                        </div>
+
+                        <!-- 回复功能 -->
+                        <div class="function_button">
+                            <img src="/image/icon/icons8-comment-50.png" alt="">
+                            <a>Reply</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 功能模块: 发帖 -->
+        <div class="wrapper">
             <i class="avatar"></i>
-            <div class="info">
-                <p class="name">Aby</p>
-                <p class="text">输入内容</p>
-                <p class="time">2023-09-20 12:00:00</p>
+            <textarea name="" id="tx" placeholder="唠几句？" rows="2" maxlength="200"></textarea>
+            <button>发布</button>
+        </div>
+        
+        <div class="wrapper">
+            <span class="total">0/200字</span>
+        </div>
+
+        <div class="list">
+            <div class="item" style="display: none;">
+                <i class="avatar"></i>
+                <div class="info">
+                    <p class="name">Aby</p>
+                    <p class="text">输入内容</p>
+                    <p class="time">2023-09-20 12:00:00</p>
+                </div>
             </div>
         </div>
+        
     </div>
-    
-</div>
 </body>
 </html>
