@@ -72,7 +72,7 @@ p {
     border-spacing: 20px;
 }
 .introduce_box table tr{
-    border-radius: 20px;
+    border-radius: 40px;
     box-shadow:
         inset -2px -2px 4px rgba(255, 255, 255, .9),
         inset 2px 2px 4px rgba(0, 0, 0, .4);

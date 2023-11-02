@@ -17,57 +17,16 @@
     <!-- 网页主要内容 -->
     <div class="container">
 
-        <!-- 下拉框：已废用，改用侧边栏 -->
-        <!-- <div class="dropdown_div"> -->
-            <!-- 单个下拉框 -->
-            <!-- <div class="dropdown">
-                <span>设计</span>
-                <div class="dropdown-content">
-                    <p>概念 / Concept</p>
-                    <p>平面 / Graphic</p>
-                    <p>UI / 人机交互</p>
-                    <p>壁纸 / Wallpaper</p>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- 临时内容 -->
-        <div style="height: 1000px; width: 1200px; background-color: rgb(151, 151, 151);"></div>
-
-
         <!-- 图瀑布 -->
-        <div class="picture_fall">
-            <!-- 瀑布列 -->
-            <div class="each_fall">
-                <!-- 图块 -->
-                <div class="picture_div" th:each="picture:${picturelist}">
-                    <a th:href="'/store/picturedetail?picture_id='+${picture.picture_id}">
-                        <img th:src="@{'/image/img_picture/'+${picture.picture}}" alt=""/>
-                    </a>
-                    <div id="picture_function_div" th:utext="${picture.picture_class}" ><b>Like</b></div>
-                    <div id="picture_collect_div" th:utext="${picture.picture_name}" ><b>Collect</b></div>
-                    <div id="picture_download_div" th:utext="${picture.price}+'CNY'" ><b>Download</b></div>
-                </div>
-            </div>
+        <div class="fall_div" id="fall_div">
         </div>
+
     </div>
-
-    <!-- 功能: 电梯 -->
-    <!-- <div class="elevator">
-        <ul class="elevator_list">
-            <li class="sea"><a href="javascript:">Acidic Sea</a></li>
-            <li class="sea"><a href="javascript:">Alkaline Sea</a></li>
-
-            <li><a href="javascript:" data-name="wb3">World Bubble Ⅲ</a></li>
-            <li><a href="javascript:" data-name="wb4">World Bubble Ⅳ</a></li>
-            <li><a href="javascript:" data-name="wb5">World Bubble Ⅴ</a></li>
-            <li><a href="javascript:" data-name="wb6">World Bubble Ⅵ</a></li>
-            
-            <li><a href="javascript:" id="backTop">Top</a></li>
-        </ul>
-    </div> -->
 
     <!-- 底部 -->
     <div class="bottom" th:insert="/bottom.html"></div>
+
+    <!-- js -->
+    <script type="text/javascript" src="/js/inspiration.js"></script>
 </body>
 </html>
