@@ -1,6 +1,5 @@
 * {
     scroll-behavior: smooth;
-    padding: 0;
 }
 body{
     display: flex;
@@ -37,13 +36,38 @@ p {
 }
 
 .image_div {
+    width: 400px;
+    height: auto;
+
     margin: 20px 0;
+    padding: 0;
     position: relative;
 }
 
 .image_div img {
     width: 400px;
     height: auto;
+
+    margin: 0;
+    padding: 0;
+}
+/* 唤醒遮罩 */
+.image_div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0 -50px 50px -30px rgba(0, 0, 0, 0.7) inset,
+                0 50px 50px -30px rgba(0, 0, 0, 0.7) inset;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image_div:hover::before {
+    opacity: 1;
 }
 
 .image_buttons {
@@ -53,6 +77,14 @@ p {
 
     right: 5px;
     bottom: 5px;
+    z-index: 100;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+/* 唤醒按钮 */
+.image_div:hover .image_buttons {
+    opacity: 1;
 }
 
 .image_button {
@@ -65,4 +97,18 @@ p {
 
     text-align: center;
     line-height: 40px;
+}
+/* 渐变遮罩 */
+.focus_div {
+    display: flex;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 400px;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+
+    /* z-index: 99; */
 }
