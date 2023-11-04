@@ -10,7 +10,6 @@ function loadImagesFromDirectory(directoryPath) {
         const imagePath = imageDirectory + i + ".png";
         imagePaths.push(imagePath);
     }
-
     populateColumns(imagePaths);
 }
 // 调用
@@ -27,11 +26,14 @@ function populateColumns(imagePaths) {
     // 渲染
     imagePaths.forEach((imagePath, index) => {
         const column = fallDiv.children[index % columnCount];
+
+        // 创建：image_div
         const imageDiv = document.createElement("div");
         imageDiv.classList.add("image_div");
         imageDiv.style.boxShadow = "2px 2px 2px #bdbdbd";
         column.appendChild(imageDiv);
 
+        // 创建：图片
         const image = document.createElement("img");
         image.src = imagePath;
         image.alt = "Image " + (index + 1);
@@ -41,16 +43,83 @@ function populateColumns(imagePaths) {
         };
         imageDiv.appendChild(image);
 
+        // 创建：按钮组 image_buttons
         const imageButtons = document.createElement("div");
         imageButtons.classList.add("image_buttons");
         imageDiv.appendChild(imageButtons);
 
+        // 创建：按钮 image_button
         for (let j = 1; j <= 3; j++) {
             const button = document.createElement("div");
             button.classList.add("image_button");
-            button.innerText = "+";
+
+            button.id = "btn" + j;
+            button.style.display = "flex"
+            button.style.justifyContent = "center";
+            button.style.alignItems = "center";
+            
+            // 创建：按钮图标 img
+            let imgSrc = "";
+            if (j === 1) {
+                imgSrc = "image/icon/icons8-heart-50-gray.png";
+            } else if (j === 2) {
+                imgSrc = "image/icon/icons8-bookmark-60-gray.png";
+            } else {
+                imgSrc = "image/icon/icons8-download-48-gray.png";
+            }
+            
+            const img = document.createElement("img");
+            img.src = imgSrc;
+            img.style.maxWidth = "24px";
+            img.alt = "";
+            
+            button.appendChild(img);
             imageButtons.appendChild(button);
         }
+    });  // 完成渲染
+
+    // 遍历每个 image_buttons 并为其中的按钮绑定事件处理程序
+    function handleButtonHover(event) {
+        const button = event.currentTarget;
+        // console.log(button)
+        const img = button.querySelector('img');
+        // console.log(img)
+        const btnId = button.id;
+        // console.log(btnId)
+    
+        if (event.type === 'mouseover') {
+            console.log('鼠标进来')
+            if (btnId === 'btn1') {
+                img.src = "image/icon/icons8-heart-50-black.png";
+                button.style.borderRadius = "50px";
+            } else if (btnId === 'btn2') {
+                img.src = "image/icon/icons8-bookmark-60-black.png";
+                button.style.borderRadius = "50px";
+            } else {
+                img.src = "image/icon/icons8-download-48-black.png";
+                button.style.borderRadius = "50px";
+            }
+        } else if (event.type === 'mouseout') {
+            console.log('鼠标出去')
+            if (btnId === 'btn1') {
+                img.src = "image/icon/icons8-heart-50-gray.png";
+                button.style.borderRadius = "10px";
+            } else if (btnId === 'btn2') {
+                img.src = "image/icon/icons8-bookmark-60-gray.png";
+                button.style.borderRadius = "10px";
+            } else {
+                img.src = "image/icon/icons8-download-48-gray.png";
+                button.style.borderRadius = "10px";
+            }
+        }
+    }
+
+    // 获取所有 image_button 并 绑定事件
+    const allImageButtons = document.querySelectorAll(".image_button");
+
+    allImageButtons.forEach(button => {
+        button.addEventListener('mouseover', handleButtonHover);
+        button.addEventListener('mouseout', handleButtonHover);
     });
 }
 
