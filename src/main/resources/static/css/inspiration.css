@@ -118,3 +118,52 @@ p {
 
     /* z-index: 99; */
 }
+
+/* 功能: 电梯 */
+.elevator {
+    position: fixed;
+    width: 100px;
+    height: auto;
+
+    left: 52%;
+    margin-left: 620px;
+    bottom: 40px;
+    z-index: 100;
+
+    text-align: center;
+    transition: all .5s;
+}
+.elevator .elevator_list {
+    width: 100px;
+    height: auto;
+
+    background: #fff;
+
+    margin: 0;
+    padding: 0;
+
+    box-shadow: 5px 5px 5px #bdbdbd;
+}
+.elevator .elevator_list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+
+    border: 1px solid #dcdcdc;
+    margin: 0;
+
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.elevator .elevator_list li img {
+    width: 60px;
+}
+
+.elevator .elevator_list li:hover {
+    background-color: #f84f52;
+}

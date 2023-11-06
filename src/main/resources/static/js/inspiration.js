@@ -88,19 +88,19 @@ function populateColumns(imagePaths) {
         // console.log(btnId)
     
         if (event.type === 'mouseover') {
-            console.log('鼠标进来')
+            // console.log('鼠标进来')
             if (btnId === 'btn1') {
-                img.src = "image/icon/icons8-heart-50-black.png";
+                img.src = "image/icon/icons8-heart-50-color.png";
                 button.style.borderRadius = "50px";
             } else if (btnId === 'btn2') {
-                img.src = "image/icon/icons8-bookmark-60-black.png";
+                img.src = "image/icon/icons8-bookmark-60-color.png";
                 button.style.borderRadius = "50px";
             } else {
-                img.src = "image/icon/icons8-download-48-black.png";
+                img.src = "image/icon/icons8-download-48-color.png";
                 button.style.borderRadius = "50px";
             }
         } else if (event.type === 'mouseout') {
-            console.log('鼠标出去')
+            // console.log('鼠标出去')
             if (btnId === 'btn1') {
                 img.src = "image/icon/icons8-heart-50-gray.png";
                 button.style.borderRadius = "10px";
@@ -183,3 +183,22 @@ function refreshOnResize() {
     location.reload();
 }
 window.addEventListener('resize', throttle(refreshOnResize, 500))
+
+// 电梯：backTop键
+document.addEventListener('DOMContentLoaded', function() {
+    (function () {
+        const backTop = document.querySelector('#backTop')
+        const img = backTop.querySelector('img');
+        // 修改样式
+        backTop.addEventListener('mouseover', function () {
+           img.src = '/image/icon/icons8-top-100-white.png'
+        })
+        backTop.addEventListener('mouseout', function () {
+            img.src = '/image/icon/icons8-top-100-gray.png'
+         })
+        // backTop功能
+        backTop.addEventListener('click', function () {
+            window.scrollTo(0, 0)
+        })
+    })();
+});
