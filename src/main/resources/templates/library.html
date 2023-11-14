@@ -9,12 +9,10 @@
 
 <body>
     <!-- 顶部 -->
-    <div class="top" th:insert="/top.html"></div>
+    <div th:insert="/top.html"></div>
 
     <!-- “图书馆”模块 -->
     <div class="library_container">
-
-
         <!-- 海: 原始海/酸性海 -->
         <div class="sea_div">
             <div class="sea_id"><p>原始海/酸性海(Primitive Sea/Acidic Sea)</p></div>
@@ -25,15 +23,6 @@
                     <p>World Bubble Ⅰ&nbsp;&nbsp;&nbsp;&nbsp;RPG</p>
                     <p>第一世界泡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;角色扮演游戏</p>
                 </div>
-
-                <!-- 书籍展示块 -->
-                <div class="book_div" th:each="product:${productlist}">
-                    <a th:href="'/store/productdetail?library_id='+${product.library_id}">
-                        <img style="height: 200px; width: 200px;" th:src="@{'/image/img_product/'+${product.picture}}" alt=""/>
-                    </a>
-                    <div id="library_class_div" th:utext="${product.library_class}" ><b>World ID</b></div>
-                    <div id="library_name_div" th:utext="${product.library_name}" ><b>World Name</b></div>
-                </div>
             </div>
 
             <!-- 第二世界泡 -->
@@ -41,14 +30,6 @@
                 <div class="wb_id">
                     <p>World Bubble Ⅱ&nbsp;&nbsp;&nbsp;&nbsp;Trilogy: Swarm, Plant, Humanoid</p>
                     <p>第二世界泡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三部曲：节肢、植物、类人</p>
-                </div>
-                <!-- 书籍展示块 -->
-                <div class="book_div" th:each="product:${productlist}">
-                    <a th:href="'/store/productdetail?library_id='+${product.library_id}">
-                        <img style="height: 200px; width: 200px;" th:src="@{'/image/img_product/'+${product.picture}}" alt=""/>
-                    </a>
-                    <div id="library_class_div" th:utext="${product.library_class}" ><b>World ID</b></div>
-                    <div id="library_name_div" th:utext="${product.library_name}" ><b>World Name</b></div>
                 </div>
             </div>
         </div>

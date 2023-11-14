@@ -13,7 +13,7 @@
 (function () {
     // 获取对象
     const list = document.querySelector('.elevator_list')
-    const top_con = document.querySelector('.top_container')  // 用于：减去 top 高度
+    const topCon = document.querySelector('.top_container')  // 用于：减去 top 高度
 
     // 绑定点击事件
     list.addEventListener('click', function (e) {
@@ -30,11 +30,17 @@
             // 当前元素添加 active 
             e.target.classList.add('active')
 
-            // 获得对应 分类区 的 offsetTop
+            // 获得对应 分类区 的 offsetTop，减去top导航栏的高度，就是最后指定卷到的高度
             // console.log(`[data-wbdivname = "${e.target.dataset.name}"]`)
-            const top = document.querySelector(`[data-wbdivname = "${e.target.dataset.name}"]`).offsetTop - top_con.clientHeight
+            const targetTop = document.querySelector(`[data-wbdivname = "${e.target.dataset.name}"]`).offsetTop - topCon.clientHeight
+
+            // 测试用
+            // console.log(document.querySelector(`[data-wbdivname = "${e.target.dataset.name}"]`).offsetTop)
+            // console.log(topCon.clientHeight)
+            // console.log(targetTop)
+            
             // 让页面滚动到对应的位置
-            document.documentElement.scrollTop = top
+            document.documentElement.scrollTop =  targetTop
         }
     })
 })();
@@ -42,7 +48,7 @@
 
 // 功能三: 滑动页面 跳转到 对应分类 (与功能二相对)
 window.addEventListener('scroll', function () {
-    const top_con = document.querySelector('.top_container')  // 用于：减去 top 高度
+    const topCon2 = document.querySelector('.top_container')  // 用于：减去 top 高度
 
     // 1. 先移除已有的 avtive类 
     // 尝试获取已有 active类 的对象 ...
@@ -65,13 +71,14 @@ window.addEventListener('scroll', function () {
     const n = document.documentElement.scrollTop
 
     // 3. 匹配
-    if (n >= wbdiv3.offsetTop - top_con.clientHeight && n < wbdiv4.offsetTop - top_con.clientHeight) {
+    // 获得对应 分类区 的 offsetTop，减去top导航栏的高度，就是最后指定卷到的高度
+    if (n >= wbdiv3.offsetTop - topCon2.clientHeight && n < wbdiv4.offsetTop - topCon2.clientHeight) {
         wb3.classList.add('active')
-    } else if (n >= wbdiv4.offsetTop - top_con.clientHeight && n < wbdiv5.offsetTop - top_con.clientHeight) {
+    } else if (n >= wbdiv4.offsetTop - topCon2.clientHeight && n < wbdiv5.offsetTop - topCon2.clientHeight) {
         wb4.classList.add('active')
-    } else if (n >= wbdiv5.offsetTop - top_con.clientHeight && n < wbdiv6.offsetTop - top_con.clientHeight) {
+    } else if (n >= wbdiv5.offsetTop - topCon2.clientHeight && n < wbdiv6.offsetTop - topCon2.clientHeight) {
         wb5.classList.add('active')
-    } else if (n >= wbdiv6.offsetTop - top_con.clientHeight) {
+    } else if (n >= wbdiv6.offsetTop - topCon2.clientHeight) {
         wb6.classList.add('active')
     }
 })
