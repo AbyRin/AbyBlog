@@ -1,6 +1,6 @@
-package com.cpr.cprblog.repository;
+package com.cpr.abyblog.repository;
 
-import com.cpr.cprblog.entity.Member;
+import com.cpr.abyblog.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

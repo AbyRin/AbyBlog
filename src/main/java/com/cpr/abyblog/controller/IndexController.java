@@ -1,10 +1,10 @@
-package com.cpr.cprblog.controller;
+package com.cpr.abyblog.controller;
 
-import com.cpr.cprblog.common.MD5Util;
-import com.cpr.cprblog.entity.Member;
-import com.cpr.cprblog.entity.Product;
-import com.cpr.cprblog.service.MemberService;
-import com.cpr.cprblog.service.ProductService;
+import com.cpr.abyblog.common.MD5Util;
+import com.cpr.abyblog.entity.Member;
+import com.cpr.abyblog.entity.Product;
+import com.cpr.abyblog.service.MemberService;
+import com.cpr.abyblog.service.ProductService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

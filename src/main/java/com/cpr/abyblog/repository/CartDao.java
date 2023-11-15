@@ -1,7 +1,7 @@
-package com.cpr.cprblog.repository;
+package com.cpr.abyblog.repository;
 
-import com.cpr.cprblog.entity.Cart;
-import com.cpr.cprblog.entity.UserCart;
+import com.cpr.abyblog.entity.Cart;
+import com.cpr.abyblog.entity.UserCart;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.cpr.cprblog.reptile;
+package com.cpr.abyblog.reptile;
 
 import org.apache.commons.io.FileUtils;
 import org.jsoup.Connection;

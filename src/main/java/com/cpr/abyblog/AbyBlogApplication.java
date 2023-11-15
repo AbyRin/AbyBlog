@@ -1,4 +1,4 @@
-package com.cpr.cprblog;
+package com.cpr.abyblog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

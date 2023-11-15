@@ -1,4 +1,4 @@
-package com.cpr.cprblog.entity;
+package com.cpr.abyblog.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

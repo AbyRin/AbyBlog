@@ -1,7 +1,7 @@
-package com.cpr.cprblog.service;
+package com.cpr.abyblog.service;
 
-import com.cpr.cprblog.entity.Product;
-import com.cpr.cprblog.repository.ProductRepository;
+import com.cpr.abyblog.entity.Product;
+import com.cpr.abyblog.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
