@@ -17,7 +17,7 @@ public class StoreController {
 
     // 商品展示
     @GetMapping("/store")
-    public List showProduct() {
+    public List<Product> showProduct() {
         List<Product> list = storeMapper.selectList(null);
         System.out.println(list);
         return list;
