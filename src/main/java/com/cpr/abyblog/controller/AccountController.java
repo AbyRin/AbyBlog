@@ -1,5 +1,6 @@
 package com.cpr.abyblog.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.cpr.abyblog.entity.User;
 import com.cpr.abyblog.mapper.AccountMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,8 @@ public class AccountController {
     // 展示用户信息
     @GetMapping("/account")
     public List<User> showAccount() {
-        return accountMapper.selectList(null);
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("userId", "?");
+        return accountMapper.selectList(queryWrapper);
     }
 }
