@@ -7,8 +7,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @TableName("order")
 public class Order {
     @TableId(type = IdType.AUTO)
-    private Integer order_id;
-    private String order_date;
-    private Integer user_id;
-    private Integer product_id;
+    private Integer orderId;
+    private String orderDate;
+    private Integer userId;
+    private Integer productId;
 }

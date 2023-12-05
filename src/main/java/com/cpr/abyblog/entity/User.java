@@ -7,20 +7,20 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @TableName("user")
 public class User {
     @TableId(type = IdType.AUTO)
-    private Integer user_id;
+    private Integer userId;
     private String email;
     private String password;
-    private String nick_name;
+    private String nickName;
     private String mobile;
     private String address;
     private Integer point;
 
-    public Integer getUser_id() {
-        return user_id;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUser_id(Integer user_id) {
-        this.user_id = user_id;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getEmail() {
@@ -39,12 +39,12 @@ public class User {
         this.password = password;
     }
 
-    public String getNick_name() {
-        return nick_name;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNick_name(String nick_name) {
-        this.nick_name = nick_name;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getMobile() {
@@ -74,10 +74,10 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "user_id=" + user_id +
+                "userId=" + userId +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", nick_name='" + nick_name + '\'' +
+                ", nickName='" + nickName + '\'' +
                 ", mobile='" + mobile + '\'' +
                 ", address='" + address + '\'' +
                 ", point=" + point +

@@ -15,10 +15,8 @@ public class ManageStoreController {
 
     // 商品展示
     @GetMapping("/manageStore")
-    public List showProduct() {
-        List<Product> list = manageStoreMapper.selectList(null);
-        System.out.println(list);
-        return list;
+    public List<Product> showProduct() {
+        return manageStoreMapper.selectList(null);
     }
 
     // 商品添加
@@ -45,8 +43,8 @@ public class ManageStoreController {
 
     // 删除商品
     @DeleteMapping("/manageStore/delete")
-    public String deleteProduct(Integer product_id) {
-        int i = manageStoreMapper.deleteById(product_id);
+    public String deleteProduct(Integer productId) {
+        int i = manageStoreMapper.deleteById(productId);
         if (i > 0) {
             return "删除成功";
         } else {
