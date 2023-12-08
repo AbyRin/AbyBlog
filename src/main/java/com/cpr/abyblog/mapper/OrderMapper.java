@@ -1,10 +1,9 @@
 package com.cpr.abyblog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.cpr.abyblog.entity.Product;
+import com.cpr.abyblog.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface ManageStoreMapper extends BaseMapper<Product> {
-
+public interface OrderMapper extends BaseMapper<Order> {
 }

@@ -1,4 +1,4 @@
-package com.cpr.abyblog.common;
+package com.cpr.abyblog.Utils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

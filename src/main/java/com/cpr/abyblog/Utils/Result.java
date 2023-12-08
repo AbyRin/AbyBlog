@@ -1,4 +1,4 @@
-package com.cpr.abyblog.common;
+package com.cpr.abyblog.Utils;
 
 import java.util.HashMap;
 import java.util.Map;

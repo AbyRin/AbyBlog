@@ -1,4 +1,4 @@
-package com.cpr.abyblog.common;
+package com.cpr.abyblog.Utils;
 
 public interface ResultCode {
     // 成功信息
