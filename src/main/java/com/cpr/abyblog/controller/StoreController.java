@@ -23,16 +23,45 @@ public class StoreController {
 
     // 商品搜索
     @GetMapping("/searchProduct")
-    public List<Product> searchProduct(@RequestParam(value="productName", defaultValue = "", required = false) String productName,
-                                             @RequestParam(value="productClass", defaultValue = "", required = false) String productClass,
-                                             @RequestParam(value="minPrice", required = false) Integer minPrice,
-                                             @RequestParam(value="maxPrice", required = false) Integer maxPrice) {
+    public List<Product> searchProduct(@RequestParam(value="productName", required = false) String productName,
+                                       @RequestParam(value="productClass", required = false) String productClass,
+                                       @RequestParam(value="minPrice", required = false) Integer minPrice,
+                                       @RequestParam(value="maxPrice", required = false) Integer maxPrice) {
         QueryWrapper<Product> queryWrapper = new QueryWrapper<>();
-        queryWrapper.like("product_name", productName);  // 按商品名搜索
-        queryWrapper.eq("product_class", productClass);  // 按商品类别搜索
-        queryWrapper.between("product_price", minPrice, maxPrice);  // 按商品价格区间搜索
+
+        // 按商品名搜索
+        if (productName != null && !productName.isEmpty()) {
+            queryWrapper.like("product_name", productName);
+        }
+
+        // 按商品类别搜索
+        if (productClass != null && !productClass.isEmpty()) {
+            if (!productClass.equals("All")) {  // 如果不是"All"，则添加条件
+                queryWrapper.eq("product_class", productClass);
+                System.out.println("productClass: " + productClass);
+            }
+            // 如果是"All"，则不添加任何条件，即匹配全部
+        }
+
+        // 按商品价格区间搜索
+        if (minPrice != null && maxPrice != null) {
+            queryWrapper.between("product_price", minPrice, maxPrice);
+        } else if (minPrice != null) {
+            queryWrapper.ge("product_price", minPrice);
+        } else if (maxPrice != null) {
+            queryWrapper.le("product_price", maxPrice);
+        }
+
+        // 如果 productClass 是 "All"，则不添加 product_class 的条件，即匹配全部
+        if (productClass != null && productClass.equals("All")) {
+            queryWrapper.isNull("product_class");
+        }
+
         return storeService.list(queryWrapper);
     }
+
+
+
 
     // 商品添加
     @PostMapping("/addProduct")

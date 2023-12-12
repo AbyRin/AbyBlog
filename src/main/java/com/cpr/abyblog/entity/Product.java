@@ -14,7 +14,8 @@ public class Product {
     private Integer productPrice;
     private String productPicture;
     private Integer productCollect;
-    private Integer productSoldNum;
+    private Integer productSold;
+    private Integer purchaseLimit;
 
     public Integer getProductId() {
         return productId;
@@ -72,12 +73,20 @@ public class Product {
         this.productCollect = productCollect;
     }
 
-    public Integer getProductSoldNum() {
-        return productSoldNum;
+    public Integer getProductSold() {
+        return productSold;
     }
 
-    public void setProductSoldNum(Integer productSoldNum) {
-        this.productSoldNum = productSoldNum;
+    public void setProductSold(Integer productSold) {
+        this.productSold = productSold;
+    }
+
+    public Integer getPurchaseLimit() {
+        return purchaseLimit;
+    }
+
+    public void setPurchaseLimit(Integer purchaseLimit) {
+        this.purchaseLimit = purchaseLimit;
     }
 
     @Override
@@ -90,7 +99,8 @@ public class Product {
                 ", productPrice=" + productPrice +
                 ", productPicture='" + productPicture + '\'' +
                 ", productCollect=" + productCollect +
-                ", productSoldNum=" + productSoldNum +
+                ", productSold=" + productSold +
+                ", purchaseLimit=" + purchaseLimit +
                 '}';
     }
 }

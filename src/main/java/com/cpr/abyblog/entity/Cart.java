@@ -8,8 +8,9 @@ import com.baomidou.mybatisplus.annotation.TableName;
 public class Cart {
     @TableId(type = IdType.AUTO)
     private Integer userId;
-    private String productId;
-    private Integer purchaseNum;
+    private Integer productId;
+    private Integer productQuantity;
+    private String addTime;
 
     public Integer getUserId() {
         return userId;
@@ -19,28 +20,27 @@ public class Cart {
         this.userId = userId;
     }
 
-    public String getProductId() {
+    public Integer getProductId() {
         return productId;
     }
 
-    public void setProductId(String productId) {
+    public void setProductId(Integer productId) {
         this.productId = productId;
     }
 
-    public Integer getPurchaseNum() {
-        return purchaseNum;
+    public Integer getProductQuantity() {
+        return productQuantity;
     }
 
-    public void setPurchaseNum(Integer purchaseNum) {
-        this.purchaseNum = purchaseNum;
+    public void setProductQuantity(Integer productQuantity) {
+        this.productQuantity = productQuantity;
     }
 
-    @Override
-    public String toString() {
-        return "Cart{" +
-                "userId=" + userId +
-                ", productId='" + productId + '\'' +
-                ", purchaseNum=" + purchaseNum +
-                '}';
+    public String getAddTime() {
+        return addTime;
+    }
+
+    public void setAddTime(String addTime) {
+        this.addTime = addTime;
     }
 }

@@ -1,10 +1,16 @@
 package com.cpr.abyblog.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cpr.abyblog.entity.User;
-import org.apache.ibatis.annotations.Mapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
-@Mapper
+/**
+ * <p>
+ *  Mapper 接口
+ * </p>
+ *
+ * @author Aby
+ * @since 2023-12-12 04:53:40
+ */
 public interface UserMapper extends BaseMapper<User> {
 
 }

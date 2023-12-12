@@ -6,14 +6,11 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 @TableName("collect")
 public class Collect {
+
     @TableId(type = IdType.AUTO)
     private Integer userId;
-
-    private Integer productId;
-
-    private Integer insImgId;
-
-    private Integer commentId;
+    private String type;
+    private Integer typeId;
 
     public Integer getUserId() {
         return userId;
@@ -23,37 +20,28 @@ public class Collect {
         this.userId = userId;
     }
 
-    public Integer getProductId() {
-        return productId;
+    public String getType() {
+        return type;
     }
 
-    public void setProductId(Integer productId) {
-        this.productId = productId;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public Integer getInsImgId() {
-        return insImgId;
+    public Integer getTypeId() {
+        return typeId;
     }
 
-    public void setInsImgId(Integer insImgId) {
-        this.insImgId = insImgId;
-    }
-
-    public Integer getCommentId() {
-        return commentId;
-    }
-
-    public void setCommentId(Integer commentId) {
-        this.commentId = commentId;
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
     }
 
     @Override
     public String toString() {
         return "Collect{" +
                 "userId=" + userId +
-                ", productId=" + productId +
-                ", insImgId=" + insImgId +
-                ", commentId=" + commentId +
+                ", type='" + type + '\'' +
+                ", typeId=" + typeId +
                 '}';
     }
 }

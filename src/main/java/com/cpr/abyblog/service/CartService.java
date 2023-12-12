@@ -1,10 +1,12 @@
 package com.cpr.abyblog.service;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.cpr.abyblog.entity.Cart;
-import com.cpr.abyblog.mapper.CartMapper;
+import com.cpr.abyblog.entity.Product;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CartService extends ServiceImpl<CartMapper, Cart> {
+public interface CartService extends IService<Cart> {
+
+    Product getProductById(Integer productId);
 }

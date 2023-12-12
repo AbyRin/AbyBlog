@@ -1,16 +1,18 @@
 package com.cpr.abyblog.service;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.cpr.abyblog.controller.dto.UserDTO;
+import com.cpr.abyblog.dto.UserDTO;
 import com.cpr.abyblog.entity.User;
-import com.cpr.abyblog.mapper.UserMapper;
-import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.service.IService;
 
-@Service
-public class UserService extends ServiceImpl<UserMapper, User> {
+/**
+ * <p>
+ *  服务类
+ * </p>
+ *
+ * @author Aby
+ * @since 2023-12-12 04:53:40
+ */
+public interface UserService extends IService<User> {
 
-//    @Override
-//    public boolean login(UserDTO, userDTO) {
-//        return false;
-//    }
+    boolean login(UserDTO userDTO);
 }

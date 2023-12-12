@@ -76,14 +76,4 @@ public class Result {
         this.setData(map);
         return this;
     }
-
-    @Override
-    public String toString() {
-        return "Result{" +
-                "success=" + success +
-                ", code=" + code +
-                ", message='" + message + '\'' +
-                ", data=" + data +
-                '}';
-    }
 }

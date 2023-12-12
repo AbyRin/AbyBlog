@@ -1,4 +1,4 @@
-package com.cpr.abyblog.controller.dto;
+package com.cpr.abyblog.dto;
 
 import lombok.Data;
 
