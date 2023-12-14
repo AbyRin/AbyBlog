@@ -32,6 +32,8 @@ public class UserController {
     @Resource
     private UserService userService;
 
+    // 按？搜索用户（返回用户信息）
+
     // 展示用户名单
     @GetMapping("/showUser")
     public List<User> showUser() {

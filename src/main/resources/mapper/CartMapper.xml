@@ -5,17 +5,23 @@
 
     <!-- 连表查询：根据用户ID 查找 购物车 -->
     <resultMap id="UserCartResultMap" type="com.cpr.abyblog.dto.UserCartDTO">
+        <!-- user -->
         <result column="user_id" property="userId" />
+        <!-- product -->
         <result column="product_id" property="productId" />
         <result column="product_name" property="productName" />
+        <result column="product_class" property="productClass" />
         <result column="product_price" property="productPrice" />
+        <result column="product_picture" property="productPicture" />
+        <result column="purchase_limit" property="purchaseLimit" />
+        <!-- cart -->
         <result column="product_quantity" property="productQuantity" />
         <result column="add_time" property="addTime" />
     </resultMap>
 
     <!-- 使用 selectList 替代 select -->
     <select id="getUserCart" resultMap="UserCartResultMap">
-        SELECT c.user_id, p.product_id, p.product_name, p.product_price, c.product_quantity, c.add_time
+        SELECT c.user_id, p.product_id, p.product_name, p.product_class, p.product_price, p.product_picture, p.purchase_limit, c.product_quantity, c.add_time
         FROM cart c
                  JOIN product p ON c.product_id = p.product_id
         WHERE c.user_id = #{userId}

@@ -12,7 +12,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -26,7 +28,6 @@ public class CartController {
     private CartService cartService;
 
     // 展示购物车
-    // 展示购物车，包含商品数量、商品名称和商品价格
     @GetMapping("/showCart")
     public List<UserCartDTO> showCart(@RequestParam Integer userId) {
         return cartMapper.getUserCart(userId);
@@ -81,7 +82,11 @@ public class CartController {
 
     // 购物车：删除商品
     @DeleteMapping("/deleteCart")
-    public boolean deleteCart(@RequestParam Integer productId) {
-        return cartService.removeById(productId);
+    public int deleteCart(@RequestParam(value = "userId") Integer userId,
+                          @RequestParam(value = "productId") Integer productId) {
+        Map<String, Object> columnMap = new HashMap<>();
+        columnMap.put("user_id", userId);
+        columnMap.put("product_id", productId);
+        return cartMapper.deleteByMap(columnMap);
     }
 }
