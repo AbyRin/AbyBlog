@@ -10,11 +10,17 @@ public class Customer {
     @TableId(value = "customer_id", type = IdType.AUTO)
     private Integer customerId;
 
-    private String email;
+    private String userId;
 
     private String customerName;
 
     private String customerMobile;
+
+    private String customerProvince;
+
+    private String customerCity;
+
+    private String customerArea;
 
     private String customerAddress;
 

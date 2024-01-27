@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * <p>
@@ -32,8 +30,6 @@ public class UserController {
 
     @Resource
     private UserService userService;
-
-    // 按？搜索用户（返回用户信息）
 
     // 展示用户名单
     @GetMapping("/showUser")
@@ -54,25 +50,36 @@ public class UserController {
         return Result.success(dto);
     }
 
-    // 用户注册
-//    @PostMapping("/signup")
-//    public boolean signup(@RequestBody User user) {
-//        return  userService.signup(user);
-//    }
+     // 用户注册
+    @PostMapping("/signup")
+    public Result signup(@RequestBody UserDTO userDTO) {
+        String email = userDTO.getEmail();
+        String password = userDTO.getPassword();
+        if (StringUtil.isBlank(email) || StringUtil.isBlank(password)) {
+            return Result.error(Constants.CODE_400, "参数错误");
+        }
+        return Result.success(userService.signup(userDTO));
+    }
 
-    // 用户登出
-//    @PostMapping("/logout")
-//    public boolean logout(@RequestBody User user) {
-//        return  userService.logout(user);
-//    }
+    // 用户登出-已在前端实现
+    //    @PostMapping("/logout")
+    //    public boolean logout(@RequestBody User user) {
+    //        return  userService.logout(user);
+    //    }
 
 
     // 管理员权限————
     // 添加用户
     @PostMapping("/addUser")
-    public boolean addUser(@RequestBody User user) {
-        return userService.save(user);
+    public Result addUser(@RequestBody User user) {
+        boolean success = userService.save(user);
+        if (success) {
+            return Result.success("用户添加成功");
+        } else {
+            return Result.error(Constants.CODE_500, "用户添加失败");
+        }
     }
+
 
     // 更新用户信息
     @PostMapping("/updateUser")
@@ -81,6 +88,7 @@ public class UserController {
     }
 
     // 分页查询：按条件查询用户
+    // 按昵称查询
     @GetMapping("/pageUser")
     public IPage<User> findPage(@RequestParam Integer pageNum,
                                 @RequestParam Integer pageSize,
