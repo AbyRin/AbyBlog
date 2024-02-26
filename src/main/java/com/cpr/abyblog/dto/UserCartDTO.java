@@ -4,16 +4,18 @@ import lombok.Data;
 
 @Data
 public class UserCartDTO {
-    // user
+    // user 表
     private Integer userId;
-    // product
+
+    // product 表
     private Integer productId;
     private String productName;
     private String productClass;
     private Integer productPrice;
     private String productPicture;
     private Integer purchaseLimit;
-    // cart
+
+    // cart 表
     private Integer productQuantity;
     private String addTime;
 }
