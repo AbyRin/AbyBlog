@@ -10,7 +10,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -46,7 +48,6 @@ public class ConsigneeController {
                                                    @RequestParam(value = "consigneeCity") String consigneeCity,
                                                    @RequestParam(value = "consigneeArea") String consigneeArea,
                                                    @RequestParam(value = "consigneeAddress") String consigneeAddress) {
-
         // 查询构造器：查询是否已存在该收件人：验证 userId 和 consigneeId
         QueryWrapper<Consignee> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_id", userId);
@@ -62,23 +63,22 @@ public class ConsigneeController {
 
             int creatLimit = 3;  // 固定值：收件人 最大创建数
 
-            // 检查购买数量是否在限制范围内？
+            // 检查购买数量是否在限制范围内？ ->
             if (consigneeCreatedQuantity >= 0 && consigneeCreatedQuantity <= creatLimit) {
                 UpdateWrapper<Consignee> updateWrapper = new UpdateWrapper<>();
                 updateWrapper.eq("user_id", userId);
                 updateWrapper.eq("consignee_id", consigneeId);
-                updateWrapper.eq("consignee_name", consigneeName);
-                updateWrapper.eq("consignee_mobile", consigneeMobile);
-                updateWrapper.eq("consignee_province", consigneeProvince);
-                updateWrapper.eq("consignee_city", consigneeCity);
-                updateWrapper.eq("consignee_area", consigneeArea);
-                updateWrapper.eq("consignee_address", consigneeAddress);
-                consigneeService.update(updateWrapper.set("consignee_name", consigneeName)
+
+                // 设置要更新的字段
+                updateWrapper
+                        .set("consignee_name", consigneeName)
                         .set("consignee_mobile", consigneeMobile)
                         .set("consignee_province", consigneeProvince)
                         .set("consignee_city", consigneeCity)
                         .set("consignee_area", consigneeArea)
-                        .set("consignee_address", consigneeAddress));
+                        .set("consignee_address", consigneeAddress);
+
+                consigneeService.update(updateWrapper);
                 return new ResponseEntity<>(1001, HttpStatus.OK);  // 状态码：更新收件人信息-成功
             } else {
                 // 收件人创建数量 超过限制
@@ -95,8 +95,30 @@ public class ConsigneeController {
             newConsignee.setConsigneeCity(consigneeCity);
             newConsignee.setConsigneeArea(consigneeArea);
             newConsignee.setConsigneeAddress(consigneeAddress);
+
             consigneeService.save(newConsignee);
             return new ResponseEntity<>(1000, HttpStatus.CREATED);  // 状态码：添加收件人-成功
         }
     }
+
+    // 删除收件人
+    @DeleteMapping("/deleteConsignee")
+    public ResponseEntity<Integer> deleteConsignee(
+            @RequestParam(value = "userId") Integer userId,
+            @RequestParam(value = "consigneeId") Integer consigneeId) {
+        // 构造删除条件
+        QueryWrapper<Consignee> deleteWrapper = new QueryWrapper<>();
+        deleteWrapper.eq("user_id", userId);
+        deleteWrapper.eq("consignee_id", consigneeId);
+
+        // 执行删除操作
+        boolean deleted = consigneeService.remove(deleteWrapper);
+
+        if (deleted) {
+            return new ResponseEntity<>(1001, HttpStatus.OK);  // 状态码1001：删除收件人-成功
+        } else {
+            return new ResponseEntity<>(2001, HttpStatus.NOT_FOUND);  // 状态码2001：删除收件人-失败（可能找不到对应记录）
+        }
+    }
+
 }

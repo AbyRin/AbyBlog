@@ -47,8 +47,8 @@ public class CartController {
         // 唯一标识：一位用户的购物车的一种商品
         Cart existingCart = cartService.getOne(queryWrapper);
 
-        if (existingCart != null) {
-            // 购物车中已存在该商品 ->
+        // 查询：购物车中是否存在该商品？ ->
+        if (existingCart != null) {  // 存在
             // 查询：商品限购额
             Product product = cartService.getProductById(productId);
             Integer purchaseLimit = product.getPurchaseLimit();
@@ -56,7 +56,7 @@ public class CartController {
             // 计算更新后的商品数量
             int updatedQuantity = existingCart.getProductQuantity() + purchaseQuantity;
 
-            // 检查购买数量是否在限制范围内
+            // 检查购买数量是否在限制范围内？ ->
             if (updatedQuantity >= 0 && updatedQuantity <= purchaseLimit) {
                 UpdateWrapper<Cart> updateWrapper = new UpdateWrapper<>();
                 updateWrapper.eq("user_id", userId);
@@ -64,10 +64,10 @@ public class CartController {
                 updateWrapper.set("product_quantity", updatedQuantity);
 
                 cartService.update(updateWrapper);
-                return new ResponseEntity<>(1001, HttpStatus.OK);  // 状态码：更新购物车-成功
+                return new ResponseEntity<>(1001, HttpStatus.OK);  // 状态码1001：更新购物车-成功(商品存在，修改数量)
             } else {
                 // 购买数量超过限制或者商品不存在，不允许更新购物车中的数量
-                return new ResponseEntity<>(2001, HttpStatus.BAD_REQUEST);  // 状态码：达到限购额
+                return new ResponseEntity<>(2001, HttpStatus.BAD_REQUEST);  // 状态码2001：达到限购额
             }
         } else {
             // 购物车中不存在该商品：添加一个 Cart 类，设置购买数量为 1 或者传入的 purchaseQuantity
@@ -75,8 +75,9 @@ public class CartController {
             newCart.setUserId(userId);
             newCart.setProductId(productId);
             newCart.setProductQuantity(Math.max(1, purchaseQuantity));
+
             cartService.save(newCart);
-            return new ResponseEntity<>(1000, HttpStatus.CREATED);  // 状态码：加入购物车-成功
+            return new ResponseEntity<>(1000, HttpStatus.CREATED);  // 状态码1000：加入购物车-成功(商品不存在，新加购物车)
         }
     }
 
