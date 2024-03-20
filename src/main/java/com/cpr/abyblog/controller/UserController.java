@@ -3,7 +3,7 @@ package com.cpr.abyblog.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.cpr.abyblog.Utils.JwtUtils;
+import com.cpr.abyblog.Utils.JwtUtils;  // JWT
 import com.cpr.abyblog.common.Constants;
 import com.cpr.abyblog.common.Result;
 import com.cpr.abyblog.dto.UserDTO;
@@ -47,7 +47,18 @@ public class UserController {
             return Result.error(Constants.CODE_400, "参数错误");
         }
         UserDTO dto = userService.login(userDTO);
-        return Result.success(dto);
+
+        // 如果用户验证通过，生成JWT令牌并返回给客户端
+        if (dto != null) {
+            int EXPIRATION_TIME = 1000 * 60 * 60 * 24 * 7;
+            String token = JwtUtils.generateToken(dto.getEmail(), EXPIRATION_TIME);
+
+            // 将 token 放入返回结果中
+            dto.setToken(token);
+            return Result.success(dto);
+        } else {
+            return Result.error(Constants.CODE_401, "用户名或密码错误");
+        }
     }
 
      // 用户注册

@@ -60,9 +60,6 @@ public class StoreController {
         return storeService.list(queryWrapper);
     }
 
-
-
-
     // 商品添加
     @PostMapping("/addProduct")
     public boolean addProduct(@RequestBody Product product) {
